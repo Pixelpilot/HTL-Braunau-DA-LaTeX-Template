@@ -1,0 +1,212 @@
+% !TEX root = ../diplomarbeit.tex
+
+%	########################################################
+% 			INFO: Zitieren, Abbildungen, Listing
+%	########################################################
+
+
+%	########################################################
+% 	Überschrift, Inhaltsverzeichnis
+%	########################################################
+\chapter*{Beispielhafte Inhalte: Zitieren, Abbildungen, Quelltext}\label{ref:zitieren}
+\addcontentsline{toc}{chapter}{Zitieren, Abbildungen, Quelltext}
+
+In diesem Kapitel sind Beispiele angeführt, wie Abbildungen, Zitate und Quelltext zu verwenden sind.
+
+Die Zitate, Abbildungen und Listings werden automatisch in das Quellen- und Abbildungsverzeichnis übernommen. 
+Das Literatur-, Abbildungs- und Listingsverzeichnis sind am Ende der Arbeit zu finden.   
+
+%	########################################################
+% 	Inhalt 
+%	########################################################
+\section*{Abbildungen}\label{ref:abbildungen}
+
+Abbildung sind mit einer Abbildungsnummer und einer Unterschrift zu versehen die kurz die Abbildung beschreibt. 
+Abbildungen gehören zum umgebenden Text und müssen dort erwähnt werden.
+
+Beispiel: In Abbildung \ref{htl01} wird das Logo der HTL Braunau dargestellt.
+
+Wird auf eine Abbildung referenziert die sich weiter von der aktuellen Textstelle entfernt befindet so kann auch die Seitennummer hinzugefügt werden.
+
+Beispiel: Siehe Abbildung \ref{htl01} auf Seite \pageref{htl01}.
+
+
+%	########################################################
+%	Eine Abbildung
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.3\textwidth]{./media/images/htl_c_cmyk_rein.pdf}
+  	\caption{Logo der HTL Braunau.}
+  	\label{htl01}
+\end{figure}
+
+
+%	########################################################
+%	Zwei Abbildungen
+
+\begin{figure}[H]
+  \centering
+  \subfloat[Logo der HTL Braunau.]{\label{fig:logo_a}\includegraphics[width=.25\textwidth]{./media/images/htl_c_cmyk_rein.pdf}}
+  \qquad
+  \subfloat[Logo der HTL Braunau.]{\label{fig:logo_b}\includegraphics[width=.25\textwidth]{./media/images/htl_c_cmyk_rein.pdf}}
+  \label{fig:canvas_01}
+  % caption - In eckigen Klammern: Text für das Abbildungsverzeichnis
+  \caption[Zwei Logos der HTL Braunau]{Zwei Logos der HTL Braunau in einer Abbildung zusammengefasst.}
+\end{figure}
+
+
+%	########################################################
+%	Drei Abbildungen
+\begin{figure}[H]
+  \centering
+  \subfloat[Logo]{\label{fig:logo_c}\includegraphics[width=.15\textwidth]{./media/images/htl_c_cmyk_rein.pdf}}
+  \qquad
+  \subfloat[Logo]{\label{fig:logo_d}\includegraphics[width=.15\textwidth]{./media/images/htl_c_cmyk_rein.pdf}}
+\qquad
+  \subfloat[Logo]{\label{fig:logo_e}\includegraphics[width=.15\textwidth]{./media/images/htl_c_cmyk_rein.pdf}}
+  \label{fig:canvas_04}
+\caption[Drei Logos der HTL Braunau]{Dreimal das Logo der HTL Braunau.}
+\end{figure}
+
+
+\section*{Zitate, Quellen, Fußnoten}
+
+Zitation dient der Nachvollziehbarkeit und ist verpflichtend, sobald fremde
+Gedanken, Daten oder Formulierungen verwendet werden. Verwenden Sie im gesamten
+Dokument eine einheitliche Zitierweise (z. B. numerische Zitate in eckigen
+Klammern) und verweisen Sie immer auf das Literaturverzeichnis.
+
+\subsection* {Allgemeine Regeln}
+
+\textbf{Kurzregeln:}
+\begin{itemize}
+  \item Direkte Zitate sind selten und müssen wörtlich übernommen werden.
+  \item Paraphrasen sind bevorzugt, aber ebenfalls zu belegen.
+  \item Längere Zitate werden als Blockzitat gesetzt.
+  \item Verkürzungen in Zitaten werden mit [...] gekennzeichnet.
+\end{itemize}
+
+Quellenangaben gehören immer ins Literaturverzeichnis, das automatisch aus den verwendeten Zitationen erstellt wird \cite{bib:wikilitverz}.
+
+Das Verwenden fremden Gedankenguts ohne Quellenangabe ist ein Plagiat und kann
+rechtliche Folgen haben \cite{bib:wikiplagiat}.
+
+\subsection*{Praktische Beispiele}
+
+\textbf{Beispiel 1: Längeres Zitat mit Verkürzung und anschließender Einordnung}
+
+\begin{quotation}
+\noindent
+\emph{\glqq We tend to think of navigating a website as clicking from page-to-page via some kind of global navigation [...] When it comes to a single page, we often think scrolling is the one and only way to move from one end to the next.\grqq}~\cite{bib:bradley1}
+\end{quotation}
+
+Der Autor betont, dass Nutzer:innen Navigation oft mit klassischen Menüs gleichsetzen. Für unser Projekt bedeutet das, dass bei One-Page-Designs klare Orientierungspunkte (z. B. Abschnittsmarker oder
+Kurz-Links) notwendig sind, um den roten Faden der Nutzung zu sichern.
+
+\textbf{Kurzregeln zu Footnotes vs. Zitation:}
+
+\begin{itemize}
+  \item Zitate verwenden, wenn eine Aussage, Zahl oder Idee aus einer
+  Quelle stammt und nachprüfbar belegt werden muss.
+  \item Fußnoten \footnote{Kurze Nebeninformationen werden in Footnotes gegeben} verwenden, wenn eine kurze Nebeninformation, ein
+  Begriffshinweis oder eine ergänzende Erklärung den Lesefluss sonst stören
+  würde.
+\end{itemize}
+
+\textbf{Beispiel 2: Begriffserklärung als Fußnote}
+
+In diesem Abschnitt wird der
+Begriff \emph{NPR} verwendet.\footnote{NPR steht für \emph{Non-photorealistic
+Rendering} und beschreibt Techniken, die bewusst nicht fotorealistisch wirken.}
+
+\textbf{Beispiel 3: Methodischer Hinweis als Fußnote}
+
+Die Messwerte wurden in einer
+Testumgebung erhoben.\footnote{Die Tests liefen auf einem isolierten System ohne
+Produktivlast; Ergebnisse sind daher nur bedingt auf den Live-Betrieb
+übertragbar.}
+
+\subsection*{Künstliche Intelligenz in akademischen Arbeiten}
+
+Der Einsatz von KI-Tools (wie Large Language Models, Bildgeneratoren oder Code-Assistenten) nimmt in akademischen Arbeiten zu. Diese Tools können bei Recherche, Ideenfindung, Code-Generierung und Texterstellung unterstützen. 
+\textbf{Wichtig:} Jeder Abschnitt oder jede Information, die mit Hilfe von KI erstellt oder wesentlich überarbeitet wurde, muss als \textbf{Fußnote} gekennzeichnet werden. Dies garantiert Transparenz und ermöglicht es dem Leser, die Quellenqualität einzuschätzen.
+
+Die Fußnote sollte folgende Informationen enthalten:
+\begin{itemize}
+  \item Verwendetes Modell/Tool (z.B. \textit{Claude Haiku 4.5}, \textit{ChatGPT-4}, \textit{GitHub Copilot})
+  \item Datum der Anfrage
+  \item Kurze Beschreibung des Prompts/der Anfrage
+  \item Bearbeitung durch den Autor (falls zutreffend)
+\end{itemize}
+
+\textbf{Beispiel: Absatz mit KI-Unterstützung}
+
+\noindent
+KI-Systeme revolutionieren die Art und Weise, wie wir Informationen verarbeiten und Entscheidungen treffen. Durch ihre Fähigkeit zur Mustererkennung und Datenanalyse ermöglichen sie schnellere und präzisere Lösungen in verschiedensten Anwendungsbereichen.\footnote{Dieser Absatz basiert auf einer Anfrage an Claude Haiku 4.5 vom 12.02.2026 mit dem Prompt: \glqq Schreibe einen einleitenden Absatz über die Auswirkungen von KI auf Informationsverarbeitung und Entscheidungsfindung.\grqq ~Das Ergebnis wurde für akademische Zwecke angepasst und auf Korrektheit überprüft.}
+
+Diese Integration von KI in wissenschaftliche Arbeiten erfordert aber kritisches Denken und Verantwortung. Der Autor bleibt für alle verwendeten Inhalte verantwortlich, auch wenn diese mit KI-Unterstützung erstellt wurden.
+
+
+%	########################################################
+%	Listings, Code
+%	########################################################
+\section*{Listings, Code}
+
+Quelltext ist ein wesentlicher Bestandteil einer Informatik Diplomarbeit.
+Listings werden wie Abbildungen nummeriert und mit einer Unterschrift versehen.
+Ebenfalls müssen sie im Text referenziert werden.
+
+\subsection*{Beispiele}
+
+Listing \ref{code:helloworld} auf Seite \pageref{code:helloworld} zeigt ein Hallo Welt Programm.
+
+%	########################################################
+%	C++
+\begin{minipage}{\linewidth}
+\lstinputlisting[language=C++,caption={Mein erstes C-Programm.},label=code:helloworld]{./media/code_snippets/bsp_01.cpp}
+\end{minipage}
+
+
+Das PHP Programm \ref{code:phpread} dient zum ermitteln aller Dateien eines Unterverzeichnisses.
+
+\begin{lstlisting}[language=PHP,caption={Alle Dateinamen ausgeben.},label=code:phpread]
+<?php
+if ($handle = opendir(realpath(__DIR__ . '/../userimages'))) {
+    
+    while (false !== ($file = readdir($handle))) {
+        echo "$file//";
+    }
+
+    closedir($handle);
+}
+?>
+\end{lstlisting}
+
+\begin{lstlisting}[language=JavaScript,caption={Mausposition ermitteln.}]
+// Calculates the mouse position.
+function getMousePos(canvas, evt) {
+	var rect = canvas.getBoundingClientRect();
+	return {
+		x: evt.clientX - rect.left,
+		y: evt.clientY - rect.top
+	};
+}
+\end{lstlisting}
+
+
+%	########################################################
+%	CSS
+\lstinputlisting[language=CSS,caption={Kurzer CSS--Quelltext.}]{./media/code_snippets/bsp.css}
+
+
+%	########################################################
+%	HTML
+\lstinputlisting[language=HTML,caption={HTML--Quelltext}]{./media/code_snippets/bsp.html}
+
+
+%	########################################################
+%	HTML
+\lstinputlisting[language=JavaScript,caption={JavaScript--Quelltext}]{./media/code_snippets/bsp.js}
+
+
+

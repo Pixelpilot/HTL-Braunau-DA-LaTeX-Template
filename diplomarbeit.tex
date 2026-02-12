@@ -1,0 +1,111 @@
+\documentclass[11pt, oneside, numbers=noenddot]{scrbook}  
+\input{./includes/htl_definintions.tex}	
+
+% --------------------------------------------------------
+% Allgmeine Informationen über die Arbeit, wie Titel, 
+% Autoren, Betreuer, etc. werden hier definiert
+% --------------------------------------------------------
+
+
+
+% Titel der Arbeit:
+\def\htlArbeitsthema{Thema der Diplomarbeit}
+
+% Schuljahr und Schwerpunkt
+\def\htlSchuljahr{2025/2026}
+\def\htlFachrichtung{Elektronik und technische Informatik}
+\def\htlSchwerpunkt{Communications}
+
+% Betreuer
+\def\htlBetreuer{Dipl.-Ing. Lukas Lämpel}
+
+% Ort
+\def\htlOrt{Braunau/Inn}
+
+% Autoren (Name, Klasse, Initialen)
+\def\htlAuthorNameA{Max Mustermann}
+\def\htlAuthorClassA{5BHELS}
+\def\authorInitialsA{MM}
+
+\def\htlAuthorNameB{Frieda Fröhlich}
+\def\htlAuthorClassB{5BHELS}
+\def\authorInitialsB{FF}
+
+% Kann bei Bedarf erweitert werden, z.B. für Gruppenarbeiten mit mehr als 2 Personen
+% \def\htlAuthorNameC{Fritz Einstein}
+% \def\htlAuthorClassC{5BHELS}
+% \def\authorInitialsC{FE}
+
+% \def\htlAuthorNameD{Eva Auer}
+% \def\htlAuthorClassD{5BHELS}
+% \def\authorInitialsD{EA}
+
+% Die Initialen werden verwendet um anzuzeigen wer welches Kapitel
+% erstellt hat.
+
+% Die Befehle \authorA - \authorD werden in den Kapitelüberschriften angefügt
+\def\authorA{\textmd{\textsuperscript{\authorInitialsA}}}
+\def\authorB{\textmd{\textsuperscript{\authorInitialsB}}}
+% \def\authorC{\textmd{\textsuperscript{\authorInitialsC}}}
+% \def\authorD{\textmd{\textsuperscript{\authorInitialsD}}}	
+
+\begin{document}
+
+
+% --------------------------------------------------------
+% Deckblatt, Eidesstattliche Erklärung, Abstract, etc. 
+% --------------------------------------------------------
+\pagenumbering{roman}	
+		
+\input{./chapters/00_deckblatt.tex}
+\input{./chapters/00_ee.tex}
+\input{./chapters/00_abstract.tex}
+
+\tableofcontents
+
+% --------------------------------------------------------
+% Beispielhafte Inhalte, wie Zitate, Abbildungen, 
+% Quelltext, etc. 
+% --------------------------------------------------------
+\input{./chapters/99_beispielhafte_inhalte.tex}
+
+
+% --------------------------------------------------------
+% Einzelnen Kapitel der Arbeit.
+% Die Kapitel selbst befinden sich im Ordner "chapters" 
+% und können dort bearbeitet werden.
+% --------------------------------------------------------
+\pagenumbering{arabic}	
+
+
+\input{./chapters/01_einleitung.tex}
+\input{./chapters/02_grundlagen.tex}
+\input{./chapters/03_konzepte.tex}
+\input{./chapters/04_implementierung.tex}
+\input{./chapters/05_prototyp.tex}
+\input{./chapters/06_conclusion.tex}
+\input{./chapters/07_projectmanagement.tex}
+
+
+% --------------------------------------------------------
+% Anhang, Danksagungen, Literaturverzeichnis, PM, etc.
+% --------------------------------------------------------
+\appendix
+
+\input{./chapters/99_acknowledgements.tex}
+
+\addcontentsline{toc}{chapter}{Listings}
+\lstlistoflistings
+
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+
+
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{plain}
+\bibliography{literature}
+
+\input{./chapters/99_authors.tex}
+
+
+\end{document}  

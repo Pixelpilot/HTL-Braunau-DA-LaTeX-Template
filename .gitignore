@@ -1,0 +1,97 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.dropbox
+Icon*
+
+# CS Code
+.vscode
+
+# LaTeX Hauptdateien
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+*.lol
+
+# LaTeX Intermediate Files
+*.dvi
+*.xdv
+*-converted-to.*
+
+# Bibliography
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+
+# Build tool auxiliary files
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+# Build directories
+build/
+out/
+
+# Index
+*.idx
+*.ilg
+*.ind
+
+# Nomenclature
+*.nlo
+*.nls
+*.nlg
+
+# Glossaries
+*.acn
+*.acr
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.lzo
+*.lzs
+
+# Algorithms
+*.alg
+*.loa
+
+# Backup files
+*~
+*.backup
+*.bak
+*.sav
+
+# Editor temporäre Dateien
+*.swp
+*.swo
+\#*\#
+.#*
+
+# PDF (optional - auskommentieren falls gewünscht)
+# *.pdf
+Vorlage_DA.pdf
