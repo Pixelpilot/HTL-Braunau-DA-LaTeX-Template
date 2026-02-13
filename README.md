@@ -130,7 +130,6 @@ Zitate im Text: `\cite{bib:haller2004npr}` → wird automatisch zu [1]
 - `00_deckblatt.tex` – Automatisierte Titelseite
 - `00_abstract.tex` – Abstract und Kurzfassung
 - `00_ee.tex` – Erklärung/Eidesstattliche Versicherung
-- `Post-01-literatur.tex` – Wird automatisch generiert
 
 #### Hauptkapitel (zum Bearbeiten)
 
