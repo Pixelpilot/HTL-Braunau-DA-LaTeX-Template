@@ -2,65 +2,44 @@
 
 \chapter{Einleitung\authorA}
 
-\section{Motivation, Problemstellung und Zielsetzung}
-% Hier wird erläutert, warum das Thema gewählt wurde, welches Problem gelöst
-% werden soll und welche Ziele erreicht werden sollen.
+In diesem Kapitel werden die Ziele dieser Diplomarbeit festgehalten. Die Gliederung der Arbeit wird durch einen kurzen Überblick über die Kapitel beschrieben.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra eget sapien in fringilla. Proin ac neque non lectus vehicula laoreet in cursus enim. Donec et erat ut erat commodo viverra vitae sed risus.
+\section{Motivation, Problemstellung und Zielsetzung}
+
+% Dieser Abschnitt erläutert die Motivation für die Themenwahl, beschreibt das zu lösende Problem und definiert die konkreten Ziele der Arbeit. Eine klare Problemstellung und explizite Zielsetzung sind wesentlich, um den Rahmen der Arbeit abzustecken und die Erfolgskriterien zu definieren.
+
+\placeholderbox{Beispiel}{%
+\subsection*{Motivation}
+In der modernen Softwareentwicklung stellt die Verwaltung von Abhängigkeiten in großen Projekten eine zunehmende Herausforderung dar. Entwicklerteams verbringen durchschnittlich 20\,\% ihrer Arbeitszeit mit der Analyse und Behebung von Versionskonflikten zwischen Bibliotheken.
+
+\subsection*{Problemstellung}
+Bestehende Dependency-Management-Tools bieten zwar automatische Aktualisierungen an, berücksichtigen jedoch nicht die semantische Kompatibilität auf API-Ebene. Dies führt zu Breaking Changes, die erst zur Laufzeit erkennbar werden und kostspielige Hotfixes erfordern.
+
+\subsection*{Zielsetzung}
+Ziel dieser Arbeit ist die Entwicklung eines intelligenten Dependency-Analyzers, der mittels statischer Code-Analyse die tatsächliche API-Nutzung erfasst und automatisch kompatible Versionen vorschlägt. Das System soll mindestens 90\,\% der Breaking Changes bereits vor der Integration erkennen und die Analysezeit unter 5 Minuten für typische Projekte halten.
+}
+
+
+
 
 \section{Gliederung der Arbeit}
-% Hier wird beschrieben, wie die Arbeit aufgebaut ist und welche Kapitel welche
-% Inhalte behandeln.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra eget sapien in fringilla. Proin ac neque non lectus vehicula laoreet in cursus enim. Donec et erat ut erat commodo viverra vitae sed risus. Etiam tortor justo, placerat in turpis sit amet, egestas tristique libero. Phasellus metus arcu, viverra at interdum ac, convallis non urna. Sed nunc libero, elementum quis ultricies at, vestibulum in arcu. Nam ultrices felis ut sagittis hendrerit. Vivamus massa sapien, interdum nec dui ac, consectetur venenatis dolor. Integer enim felis, finibus at efficitur eget, viverra vitae purus. Curabitur at libero pretium, vestibulum lacus at, eleifend nisl.
+% Dieser Abschnitt gibt einen Überblick über den Aufbau der Arbeit und beschreibt kurz den Inhalt der einzelnen Kapitel. Dies ermöglicht Lesenden eine schnelle Orientierung und zeigt die logische Struktur der Argumentation auf.
 
-\begin{figure}[tb]
-\centering
-  \begin{center}
-    \includegraphics[scale=0.5]{media/images/htl_c_cmyk_rein.pdf}
-  \end{center}
-\caption{A short description goes here!}
-\label{figure_label}
-\end{figure}
+\placeholderbox{Beispiel}{%
+Die vorliegende Arbeit gliedert sich in sieben Kapitel:\\
 
-Nullam Figure~\ref{figure_label} ut magna quis ante gravida aliquet. Integer ultricies libero vitae quam mollis, non tincidunt justo posuere. Mauris ultricies varius orci non tempus. Sed at ex maximus, tempor libero id, convallis ligula. Donec posuere massa sit amet porttitor vehicula. Donec porttitor luctus dui sed blandit. Ut egestas, enim id egestas auctor, est ligula accumsan diam, nec lacinia massa elit vitae purus.
+\textbf{Kapitel 1 -- Einleitung} führt in die Thematik ein, beschreibt die Problemstellung und definiert die Zielsetzung der Arbeit.
 
-Ut consectetur ipsum id nisl sodales varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam venenatis varius maximus. Aenean aliquet mi a magna tempor, et sagittis ligula tincidunt. Maecenas ornare non leo et dignissim. Nunc ac feugiat magna. Nulla at sollicitudin massa, nec sollicitudin libero. Nunc posuere dolor mauris, non congue neque lobortis eget. Vestibulum ex leo, ullamcorper quis malesuada in, maximus quis nisl. Morbi neque diam, dignissim non suscipit ac, molestie at sem. In hac habitasse platea dictumst. Curabitur dictum eros non ipsum luctus, a malesuada sapien iaculis. Nam mauris nisi, sodales et consectetur quis, varius eu lacus.
+\textbf{Kapitel 2 -- Grundlagen} vermittelt das notwendige theoretische Fundament, definiert zentrale Begriffe und stellt den aktuellen Stand der Technik dar.
 
+\textbf{Kapitel 3 -- Konzepte} präsentiert die entwickelten Lösungsansätze, beschreibt die Systemarchitektur und begründet getroffene Designentscheidungen.
 
-\section{Problem Statement}
+\textbf{Kapitel 4 -- Implementierung} dokumentiert die technische Umsetzung, erläutert kritische Implementierungsdetails und beschreibt verwendete Algorithmen.
 
+\textbf{Kapitel 5 -- Prototyp und Evaluation} stellt den entwickelten Prototyp vor, beschreibt durchgeführte Tests und evaluiert die Ergebnisse hinsichtlich der definierten Zielsetzung.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra eget sapien in fringilla. Proin ac neque non lectus vehicula laoreet in cursus enim. Donec et erat ut erat commodo viverra vitae sed risus. Etiam tortor justo, placerat in turpis sit amet, egestas tristique libero. Phasellus metus arcu, viverra at interdum ac, convallis non urna. Sed nunc libero, elementum quis ultricies at, vestibulum in arcu. Nam ultrices felis ut sagittis hendrerit. Vivamus massa sapien, interdum nec dui ac, consectetur venenatis dolor. Integer enim felis, finibus at efficitur eget, viverra vitae purus. Curabitur at libero pretium, vestibulum lacus at, eleifend nisl.
+\textbf{Kapitel 6 -- Zusammenfassung und Ausblick} fasst die wichtigsten Erkenntnisse zusammen, reflektiert kritisch die Ergebnisse und skizziert mögliche Weiterentwicklungen.
 
-\begin{figure}[tb]
-\centering
-\begin{minipage}[b]{0.90\textwidth}
-    \begin{lstlisting}[language=C,captionpos=b,caption=This C snipped is important. Short description.,label=code_a]
-int main() {
-    printf("Hello World");
+\textbf{Kapitel 7 -- Projektmanagement} dokumentiert die Projektorganisation, Aufgabenverteilung und den zeitlichen Ablauf der Diplomarbeit.
 }
-    \end{lstlisting}
-\end{minipage}
-\end{figure}
-
-Nullam Listing~\ref{code_a} ut magna quis ante gravida aliquet. Integer ultricies libero vitae quam mollis, non tincidunt justo posuere. Mauris ultricies varius orci non tempus. Sed at ex maximus, tempor libero id, convallis ligula. Donec posuere massa sit amet porttitor vehicula. Donec porttitor luctus dui sed blandit. Ut egestas, enim id egestas auctor, est ligula accumsan diam, nec lacinia massa elit vitae purus.
-
-Ut consectetur ipsum id nisl sodales varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam venenatis varius maximus. Aenean aliquet mi a magna tempor, et sagittis ligula tincidunt. Maecenas ornare non leo et dignissim. Nunc ac feugiat magna. Nulla at sollicitudin massa, nec sollicitudin libero. Nunc posuere dolor mauris, non congue neque lobortis eget. Vestibulum ex leo, ullamcorper quis malesuada in, maximus quis nisl. Morbi neque diam, dignissim non suscipit ac, molestie at sem. In hac habitasse platea dictumst. Curabitur dictum eros non ipsum luctus, a malesuada sapien iaculis. Nam mauris nisi, sodales et consectetur quis, varius eu lacus.
-
-\section{Inventions OR Solutions OR Contributions}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra eget sapien in fringilla. Proin ac neque non lectus vehicula laoreet in cursus enim. Donec et erat ut erat commodo viverra vitae sed risus. Etiam tortor justo, placerat in turpis sit amet, egestas tristique libero. Phasellus metus arcu, viverra at interdum ac, convallis non urna. Sed nunc libero, elementum quis ultricies at, vestibulum in arcu. Nam ultrices felis ut sagittis hendrerit. Vivamus massa sapien, interdum nec dui ac, consectetur venenatis dolor. Integer enim felis, finibus at efficitur eget, viverra vitae purus. Curabitur at libero pretium, vestibulum lacus at, eleifend nisl.
-
-Nullam ut magna quis ante gravida aliquet. Integer ultricies libero vitae quam mollis, non tincidunt justo posuere. Mauris ultricies varius orci non tempus. Sed at ex maximus, tempor libero id, convallis ligula. Donec posuere massa sit amet porttitor vehicula. Donec porttitor luctus dui sed blandit. Ut egestas, enim id egestas auctor, est ligula accumsan diam, nec lacinia massa elit vitae purus.
-
-Ut consectetur ipsum id nisl sodales varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam venenatis varius maximus. Aenean aliquet mi a magna tempor, et sagittis ligula tincidunt. Maecenas ornare non leo et dignissim. Nunc ac feugiat magna. Nulla at sollicitudin massa, nec sollicitudin libero. Nunc posuere dolor mauris, non congue neque lobortis eget. Vestibulum ex leo, ullamcorper quis malesuada in, maximus quis nisl. Morbi neque diam, dignissim non suscipit ac, molestie at sem. In hac habitasse platea dictumst. Curabitur dictum eros non ipsum luctus, a malesuada sapien iaculis. Nam mauris nisi, sodales et consectetur quis, varius eu lacus.
-
-
-\section{Structure of this Thesis}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra eget sapien in fringilla. Proin ac neque non lectus vehicula laoreet in cursus enim. Donec et erat ut erat commodo viverra vitae sed risus. Etiam tortor justo, placerat in turpis sit amet, egestas tristique libero. Phasellus metus arcu, viverra at interdum ac, convallis non urna. Sed nunc libero, elementum quis ultricies at, vestibulum in arcu. Nam ultrices felis ut sagittis hendrerit. Vivamus massa sapien, interdum nec dui ac, consectetur venenatis dolor. Integer enim felis, finibus at efficitur eget, viverra vitae purus. Curabitur at libero pretium, vestibulum lacus at, eleifend nisl.
-
-Nullam ut magna quis ante gravida aliquet. Integer ultricies libero vitae quam mollis, non tincidunt justo posuere. Mauris ultricies varius orci non tempus. Sed at ex maximus, tempor libero id, convallis ligula. Donec posuere massa sit amet porttitor vehicula. Donec porttitor luctus dui sed blandit. Ut egestas, enim id egestas auctor, est ligula accumsan diam, nec lacinia massa elit vitae purus.
-
-Ut consectetur ipsum id nisl sodales varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam venenatis varius maximus. Aenean aliquet mi a magna tempor, et sagittis ligula tincidunt. Maecenas ornare non leo et dignissim. Nunc ac feugiat magna. Nulla at sollicitudin massa, nec sollicitudin libero. Nunc posuere dolor mauris, non congue neque lobortis eget. Vestibulum ex leo, ullamcorper quis malesuada in, maximus quis nisl. Morbi neque diam, dignissim non suscipit ac, molestie at sem. In hac habitasse platea dictumst. Curabitur dictum eros non ipsum luctus, a malesuada sapien iaculis. Nam mauris nisi, sodales et consectetur quis, varius eu lacus.

@@ -307,6 +307,32 @@ klare Orientierungspunkte notwendig sind.
 2. **Code:** `\label{code:deskriptivername}`
 3. **Kapitel:** `\label{sec:deskriptivername}`
 
+### Künstliche Intelligenz in akademischen Arbeiten
+
+Der Einsatz von KI-Tools wird zunehmend in akademischen Arbeiten verwendet. Diese können bei Recherche, Ideenfindung, Code-Generierung und Texterstellung unterstützen. **Transparenz ist essentiell:** Jeder Abschnitt oder jede Information, die mit KI-Unterstützung erstellt wurde, muss als **Fußnote** gekennzeichnet werden.
+
+**Erforderliche Informationen in der Fußnote:**
+- Verwendetes KI-Modell/Tool (z.B. Claude Haiku 4.5, ChatGPT-4, GitHub Copilot)
+- Datum der Anfrage
+- Kurze Beschreibung des Prompts/der Anfrage
+- Art der Bearbeitung durch den Autor (überprüft, angepasst, verändert, etc.)
+
+**Beispiel einer KI-Kennzeichnung im Text:**
+
+```latex
+KI-Systeme revolutionieren die Art und Weise, wie wir Informationen 
+verarbeiten.\footnote{Dieser Absatz basiert auf einer Anfrage an 
+Claude Haiku 4.5 vom 12.02.2026 mit dem Prompt: 
+\glqq Schreibe einen Absatz über KI.\grqq ~Das Ergebnis wurde überprüft 
+und für akademische Zwecke angepasst.}
+```
+
+**Wichtig:**
+- Der Autor bleibt verantwortlich für alle Inhalte, auch wenn KI verwendet wurde
+- KI-generierte Inhalte müssen kritisch überprüft und angepasst werden
+- Achten Sie auf Plagiate und Genauigkeit der KI-Ausgaben
+- Verwenden Sie KI-Tools transparent und ethisch korrekt
+
 ---
 
 ## Häufige Probleme und Lösungen

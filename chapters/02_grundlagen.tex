@@ -3,30 +3,59 @@
 \chapter{Grundlagen\authorB}
 
 \section{Begriffsdefinitionen}
-% Hier werden zentrale Begriffe definiert und erläutert, um eine einheitliche
-% Begrifflichkeit sicherzustellen.
+% Die Definitionen orientieren sich an etablierten wissenschaftlichen Quellen und schaffen eine einheitliche Terminologie für die weitere Ausarbeitung.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra eget sapien in fringilla. Proin ac neque non lectus vehicula laoreet in cursus enim. Donec et erat ut erat commodo viverra vitae sed risus.
+In diesem Abschnitt werden alle fachspezifischen Begriffe und Konzepte definiert, die für das Verständnis dieser Arbeit notwendig sind. 
+
+\placeholderbox{Beispiel}{%
+    \textbf{Neuronales Netzwerk}\\
+    Ein künstliches neuronales Netzwerk ist ein mathematisches Modell, das aus miteinander verbundenen Knoten (Neuronen) besteht, die in Schichten angeordnet sind. Jede Verbindung besitzt ein Gewicht, das während des Trainings angepasst wird, um komplexe nichtlineare Zusammenhänge zwischen Eingabe- und Ausgabedaten zu lernen.
+}
 
 \section{State of the art}
-% Hier wird der aktuelle Stand der Technik bzw. der Forschung zu den relevanten
-% Themen beschrieben.
 
-Lorem ipsum~\cite{bib:hanl2004npr} dolor sit amet, consectetur adipiscing elit. Aenean viverra eget sapien in fringilla. Proin ac neque non lectus vehicula laoreet in cursus enim. Donec et erat ut erat commodo viverra vitae sed risus. Etiam tortor justo, placerat in turpis sit amet, egestas tristique libero. Phasellus metus arcu, viverra at interdum ac, convallis non urna. Sed nunc libero, elementum quis ultricies at, vestibulum in arcu.
+% Es werden bestehende Lösungen, aktuelle Forschungsergebnisse und identifizierte Forschungslücken beschrieben, um zu verdeutlichen, wo die eigene Arbeit ansetzt und welchen Beitrag sie leistet.
+
+In diesem Abschnitt wird der aktuelle Stand der Technik oder Forschung im relevanten Fachgebiet dargestellt. 
+
+\placeholderbox{Beispiel}{%
+\textbf{Tesla Autopilot}\\[0.5ex]
+Teslas Fahrassistenzsystem verwendet acht Kameras, zwölf Ultraschallsensoren und einen Radar zur Umgebungserfassung. Das neuronale Netzwerk wurde mit Milliarden von Kilometern realer Fahrdaten trainiert und ermöglicht adaptive Geschwindigkeitsregelung, Spurhalten und automatisches Einparken.
+}
 
 \section{Theoretische Grundlagen}
-% Hier werden mathematische, physikalische oder informatische Prinzipien
-% erläutert, die für das Verständnis der Arbeit wichtig sind.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra eget sapien in fringilla. Proin ac neque non lectus vehicula laoreet in cursus enim. Donec et erat ut erat commodo viverra vitae sed risus. Etiam tortor justo, placerat in turpis sit amet, egestas tristique libero.
+% Die Darstellung sollte so detailliert sein, dass Leser mit entsprechendem Fachverständnis die Funktionsweise nachvollziehen und die getroffenen Designentscheidungen bewerten können.
+
+Dieser Abschnitt erläutert die theoretischen Konzepte, Modelle, Algorithmen oder mathematischen Methoden, die dem entwickelten System zugrunde liegen. 
+
+\placeholderbox{Beispiel}{%
+\textbf{Diskrete Kosinustransformation (DCT)}\\[0.5ex]
+Die DCT ist eine lineare Transformation, die ein Signal vom Ortsbereich in den Frequenzbereich überführt. Für ein eindimensionales Signal $x[n]$ der Länge $N$ ist die DCT definiert als:
+\begin{equation}
+X[k] = \sum_{n=0}^{N-1} x[n] \cos\left[\frac{\pi}{N}\left(n + \frac{1}{2}\right)k\right]
+\end{equation}
+Die DCT konzentriert die Energie des Signals in wenigen niedrigen Frequenzkoeffizienten, was effiziente Kompression ermöglicht. Sie bildet die Grundlage des JPEG-Algorithmus.
+}
 
 \section{Technologische Grundlagen}
-% Falls in der Arbeit spezifische Technologien genutzt werden (z. B.
-% Programmiersprachen, Hardware, Protokolle), sollten sie hier beschrieben werden.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra eget sapien in fringilla. Proin ac neque non lectus vehicula laoreet in cursus enim. Donec et erat ut erat commodo viverra vitae sed risus.
+% Die Erläuterung ihrer grundlegenden Funktionsweise und ihrer spezifischen Rolle im Projekt schafft das notwendige technische Verständnis für die nachfolgenden Implementierungskapitel.
+
+In diesem Abschnitt werden die im Projekt verwendeten Technologien, Programmiersprachen, Frameworks, Protokolle oder Hardware-Komponenten vorgestellt. 
+
+\placeholderbox{Beispiel}{%
+\textbf{React (Frontend-Framework)}\\[0.5ex]
+React ist eine JavaScript-Bibliothek zur Erstellung von Benutzeroberflächen, entwickelt von Meta (Facebook). Das Kernkonzept sind wiederverwendbare Komponenten, die ihren eigenen Zustand verwalten. Der Virtual DOM ermöglicht effiziente Updates, indem nur geänderte Teile der Benutzeroberfläche neu gerendert werden.
+}
 
 \section{Voraussetzungen und Einschränkungen}
-% Hier werden die Rahmenbedingungen für die Arbeit definiert.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra eget sapien in fringilla. Proin ac neque non lectus vehicula laoreet in cursus enim. Donec et erat ut erat commodo viverra vitae sed risus.
+% Eine transparente Darstellung von Voraussetzungen und Limitationen ist wesentlich für die wissenschaftliche Qualität und ermöglicht eine realistische Einordnung der erzielten Ergebnisse.
+
+Dieser Abschnitt definiert die Rahmenbedingungen, unter denen die Arbeit durchgeführt wurde, sowie bewusste Einschränkungen des Projektumfangs (Scope). 
+
+\placeholderbox{Beispiel}{%
+\textbf{Plattform-Einschränkungen}\\[0.5ex]
+Die Implementierung erfolgt ausschließlich für Desktop-Betriebssysteme (Windows 10/11, macOS 12+, Ubuntu 20.04+). Mobile Plattformen (iOS, Android) sind nicht Teil des Projektumfangs, da die Fokussierung auf Desktop-Systeme eine tiefere Integration mit Systemschnittstellen und ausführlichere Testszenarien ermöglicht.
+}

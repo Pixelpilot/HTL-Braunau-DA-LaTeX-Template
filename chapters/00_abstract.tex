@@ -3,17 +3,29 @@
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra eget sapien in fringilla. Proin ac neque non lectus vehicula laoreet in cursus enim. Donec et erat ut erat commodo viverra vitae sed risus. Etiam tortor justo, placerat in turpis sit amet, egestas tristique libero. Phasellus metus arcu, viverra at interdum ac, convallis non urna. Sed nunc libero, elementum quis ultricies at, vestibulum in arcu. Nam ultrices felis ut sagittis hendrerit. Vivamus massa sapien, interdum nec dui ac, consectetur venenatis dolor. Integer enim felis, finibus at efficitur eget, viverra vitae purus. Curabitur at libero pretium, vestibulum lacus at, eleifend nisl.
+\emph{Das Abstract ist eine prägnante Zusammenfassung der gesamten Arbeit in englischer Sprache. Es umfasst typischerweise 150--250 Wörter und beschreibt das Problem, die verwendete Methodik, die wichtigsten Ergebnisse und die Schlussfolgerungen. Das Abstract ermöglicht Lesenden eine schnelle Einschätzung der Relevanz der Arbeit.}
 
-Nullam ut magna quis ante gravida aliquet. Integer ultricies libero vitae quam mollis, non tincidunt justo posuere. Mauris ultricies varius orci non tempus. Sed at ex maximus, tempor libero id, convallis ligula. Donec posuere massa sit amet porttitor vehicula. Donec porttitor luctus dui sed blandit. Ut egestas, enim id egestas auctor, est ligula accumsan diam, nec lacinia massa elit vitae purus.
+\placeholderbox{Example}{%
+Modern software development faces significant challenges in managing dependencies across large-scale projects, with version conflicts consuming substantial developer time. Existing dependency management tools provide automatic updates but fail to consider semantic compatibility at the API level, leading to runtime errors and costly hotfixes.
 
-Ut consectetur ipsum id nisl sodales varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam venenatis varius maximus. Aenean aliquet mi a magna tempor, et sagittis ligula tincidunt. Maecenas ornare non leo et dignissim. Nunc ac feugiat magna. Nulla at sollicitudin massa, nec sollicitudin libero. Nunc posuere dolor mauris, non congue neque lobortis eget. Vestibulum ex leo, ullamcorper quis malesuada in, maximus quis nisl. Morbi neque diam, dignissim non suscipit ac, molestie at sem. In hac habitasse platea dictumst. Curabitur dictum eros non ipsum luctus, a malesuada sapien iaculis. Nam mauris nisi, sodales et consectetur quis, varius eu lacus.
+This thesis presents an intelligent dependency analyzer that leverages static code analysis to detect actual API usage patterns and automatically suggest compatible library versions. The system combines abstract syntax tree analysis with a machine learning classifier trained on 50,000 real-world dependency conflicts.
+
+Evaluation on ten open-source projects (10,000--100,000 lines of code) demonstrates that the analyzer identifies 94\,\% of breaking changes before integration, with an average analysis time of 3.2 minutes per project. The false positive rate was reduced to 8\,\% compared to 23\,\% in existing tools.
+
+The proposed solution significantly reduces integration risks and accelerates development cycles. Future work will extend support to dynamic languages and incorporate runtime behavior analysis.
+}
 
 \chapter*{Kurzfassung}
 \addcontentsline{toc}{chapter}{Kurzfassung}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra eget sapien in fringilla. Proin ac neque non lectus vehicula laoreet in cursus enim. Donec et erat ut erat commodo viverra vitae sed risus. Etiam tortor justo, placerat in turpis sit amet, egestas tristique libero. Phasellus metus arcu, viverra at interdum ac, convallis non urna. Sed nunc libero, elementum quis ultricies at, vestibulum in arcu. Nam ultrices felis ut sagittis hendrerit. Vivamus massa sapien, interdum nec dui ac, consectetur venenatis dolor. Integer enim felis, finibus at efficitur eget, viverra vitae purus. Curabitur at libero pretium, vestibulum lacus at, eleifend nisl.
+\emph{Die Kurzfassung ist eine prägnante Zusammenfassung der gesamten Arbeit in deutscher Sprache. Sie umfasst typischerweise 150--250 Wörter und beschreibt das Problem, die verwendete Methodik, die wichtigsten Ergebnisse und die Schlussfolgerungen. Die Kurzfassung ermöglicht Lesenden eine schnelle Einschätzung der Relevanz der Arbeit.}
 
-Nullam ut magna quis ante gravida aliquet. Integer ultricies libero vitae quam mollis, non tincidunt justo posuere. Mauris ultricies varius orci non tempus. Sed at ex maximus, tempor libero id, convallis ligula. Donec posuere massa sit amet porttitor vehicula. Donec porttitor luctus dui sed blandit. Ut egestas, enim id egestas auctor, est ligula accumsan diam, nec lacinia massa elit vitae purus.
+\placeholderbox{Beispiel}{%
+Die moderne Softwareentwicklung steht vor erheblichen Herausforderungen bei der Verwaltung von Abhängigkeiten in großangelegten Projekten, wobei Versionskonflikte erhebliche Entwicklerzeit binden. Bestehende Dependency-Management-Tools bieten zwar automatische Updates, berücksichtigen jedoch nicht die semantische Kompatibilität auf API-Ebene, was zu Laufzeitfehlern und kostspieligen Hotfixes führt.
 
-Ut consectetur ipsum id nisl sodales varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam venenatis varius maximus. Aenean aliquet mi a magna tempor, et sagittis ligula tincidunt. Maecenas ornare non leo et dignissim. Nunc ac feugiat magna. Nulla at sollicitudin massa, nec sollicitudin libero. Nunc posuere dolor mauris, non congue neque lobortis eget. Vestibulum ex leo, ullamcorper quis malesuada in, maximus quis nisl. Morbi neque diam, dignissim non suscipit ac, molestie at sem. In hac habitasse platea dictumst. Curabitur dictum eros non ipsum luctus, a malesuada sapien iaculis. Nam mauris nisi, sodales et consectetur quis, varius eu lacus.
+Diese Diplomarbeit präsentiert einen intelligenten Dependency-Analyzer, der mittels statischer Code-Analyse tatsächliche API-Nutzungsmuster erfasst und automatisch kompatible Bibliotheksversionen vorschlägt. Das System kombiniert Abstract-Syntax-Tree-Analyse mit einem Machine-Learning-Klassifikator, der mit 50.000 realen Abhängigkeitskonflikten trainiert wurde.
+
+Die Evaluierung an zehn Open-Source-Projekten (10.000--100.000 Zeilen Code) zeigt, dass der Analyzer 94\,\% der Breaking Changes vor der Integration identifiziert, bei einer durchschnittlichen Analysezeit von 3,2 Minuten pro Projekt. Die False-Positive-Rate wurde gegenüber bestehenden Tools von 23\,\% auf 8\,\% reduziert.
+
+Die vorgeschlagene Lösung reduziert Integrationsrisiken signifikant und beschleunigt Entwicklungszyklen. Zukünftige Arbeiten werden die Unterstützung dynamischer Sprachen erweitern und Laufzeitverhaltensanalyse integrieren.
+}
