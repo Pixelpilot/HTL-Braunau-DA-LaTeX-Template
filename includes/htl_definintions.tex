@@ -130,6 +130,7 @@
     {\setlength{\fboxsep}{6pt}%
     \noindent\fcolorbox{placeholderred}{white}{%
         \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{%
+            \setlength{\parskip}{0.5\baselineskip}%
             {\tiny\color{placeholderred}\textbf{#1}}\par\nointerlineskip\vspace{0.5\baselineskip} #2%
         }%
     }}%

@@ -13,11 +13,13 @@ Diese Vorlage ist eine professionelle LaTeX-Umgebung für die Erstellung von Dip
 ### Besonderheiten
 - KOMA-Script Dokumentenklasse (`scrbook`)
 - Deutsche Lokalisierung (Babel)
+- **Placeholder-Box System** für Beispielinhalte (rote Rahmen mit `\placeholderbox`)
 - Numerische Zitationen mit BibTeX
 - Automatische Verzeichnisse (Inhalts-, Abbildungs-, Listings-, Literaturverzeichnis)
 - Code-Highlighting mit `listings`
 - Professionelle Kopf- und Fußzeilengestaltung
 - Unterstützung für Subfiguren
+- Modular strukturierte Kapitel mit Author-Includes für Multi-Autor Arbeiten
 
 ---
 
@@ -34,20 +36,24 @@ HTL-Braunau-DA-LaTeX-Template/
 │   ├── 00_deckblatt.tex         # Titelseite
 │   ├── 00_abstract.tex          # Abstract und Kurzfassung
 │   ├── 00_ee.tex                # Erklärung und Eidesstattliche Versicherung
-│   ├── 01_introduction.tex      # Einleitung
-│   ├── 02_systemoverview.tex   # Systemüberblick
-│   ├── 03_contenta.tex         # Inhalt A
-│   ├── 04_contentb.tex         # Inhalt B
-│   ├── 05_contentc.tex         # Inhalt C
-│   ├── 06_evaluation.tex       # Evaluierung
-│   ├── 07_projectmanagement.tex # Projektmanagement
-│   ├── 08_futurework.tex       # Zukünftige Arbeiten
-│   ├── 09_relatedwork.tex      # Verwandte Arbeiten
-│   ├── 10_conclusion.tex       # Fazit/Schlussfolgerung
-│   ├── 99_acknowledgements.tex # Danksagungen
-│   ├── 99_authors.tex          # Autorenangaben
-│   ├── 99_beispielhafte_inhalte.tex  # Beispielkapitel (Zitate, Abbildungen, Code)
-│   └── Post-01-literatur.tex   # Literaturverzeichnis
+│   ├── 01_einleitung.tex        # Einleitung
+│   ├── 02_grundlagen.tex        # Grundlagen (Begriffsdefinitionen, State of the Art, etc.)
+│   ├── 03_konzepte.tex          # Konzepte und Lösungsansätze
+│   ├── 03_konzepte_authorA.tex  # Konzept A (Autor A)
+│   ├── 03_konzepte_authorB.tex  # Konzept B (Autor B)
+│   ├── 03_konzepte_authorC.tex  # Konzept C (Autor C)
+│   ├── 04_implementierung.tex   # Implementierung
+│   ├── 04_implementierung_authorA.tex  # Implementierung A (Autor A)
+│   ├── 04_implementierung_authorB.tex  # Implementierung B (Autor B)
+│   ├── 05_prototyp.tex          # Prototyp und Ergebnisse
+│   ├── 05_prototyp_authorA.tex  # Prototyp A (Autor A)
+│   ├── 05_prototyp_authorB.tex  # Prototyp B (Autor B)
+│   ├── 06_conclusion.tex        # Fazit und Schlussfolgerungen
+│   ├── 07_projectmanagement.tex # Projektmanagement (Planung, Zeiterfassung)
+│   ├── 99_acknowledgements.tex  # Danksagungen
+│   ├── 99_authors.tex           # Autorenangaben
+│   ├── 99_beispielhafte_inhalte.tex  # Beispielkapitel (Best Practices)
+│   └── Post-01-literatur.tex    # Literaturverzeichnis
 │
 ├── includes/                     # Konfiguration und Definitionen
 │   ├── htl_definintions.tex    # LaTeX-Pakete und Konfigurationen
@@ -101,8 +107,8 @@ Die zentrale Datei, die alle Komponenten zusammenführt:
 BibTeX-Format-Datei für alle Quellenangaben:
 
 ```bibtex
-@article{bib:haller2004npr,
-  author = {Haller, Martin and others},
+@article{bib:hanl2004npr,
+  author = {Hanl, Christian and others},
   title = {Non-photorealistic Rendering Techniques},
   journal = {Computer Graphics Forum},
   year = {2004}
@@ -120,31 +126,47 @@ Zitate im Text: `\cite{bib:haller2004npr}` → wird automatisch zu [1]
 
 ### Kapitel: `chapters/`
 
-#### Struktur-Kapitel (keine Bearbeitung nötig)
+#### Titelseiten und Metadaten (keine Bearbeitung nötig)
 - `00_deckblatt.tex` – Automatisierte Titelseite
 - `00_abstract.tex` – Abstract und Kurzfassung
 - `00_ee.tex` – Erklärung/Eidesstattliche Versicherung
 - `Post-01-literatur.tex` – Wird automatisch generiert
 
-#### Inhalts-Kapitel (zum Bearbeiten)
-- `01_introduction.tex` – Einleitung (Motivation, Problemstellung, Gliederung)
-- `02_systemoverview.tex` – Überblick über das System/Projekt
-- `03_contenta.tex` bis `05_contentc.tex` – Hauptinhalte
-- `06_evaluation.tex` – Evaluierung und Ergebnisse
-- `07_projectmanagement.tex` – Projektmanagement, Zeitplan
-- `08_futurework.tex` – Zukünftige Erweiterungen
-- `09_relatedwork.tex` – Verwandte Arbeiten, State of the Art
-- `10_conclusion.tex` – Fazit und Schlussfolgerungen
-- `99_acknowledgements.tex` – Danksagungen
-- `99_authors.tex` – Autorenangaben
+#### Hauptkapitel (zum Bearbeiten)
 
-#### Beispiel-Kapitel: `99_beispielhafte_inhalte.tex`
-Demonstriert Best Practices für:
-- **Korrekte Zitationen** (Paraphrasen vs. direkte Zitate)
-- **Abbildungseinbindung** (Bilder, Subfiguren)
-- **Code-Listings** (mit Syntax-Highlighting)
-- **Fußnoten** vs. Zitate
-- Unterschiede zwischen `\cite{}` und `\footnote{}`
+**01_einleitung.tex** – Einleitung  
+Motivation, Problemstellung und Zielsetzung mit Kapitelgliederung.
+
+**02_grundlagen.tex** – Grundlagen  
+Begriffsdefinitionen, State of the Art, theoretische und technologische Grundlagen.
+
+**03_konzepte.tex** – Konzepte und Lösungsansätze  
+Führt mehrere Konzeptansätze zusammen (Autor A, B, C) mit Evaluierungstabelle.
+- `03_konzepte_authorA.tex` – Konzept A
+- `03_konzepte_authorB.tex` – Konzept B  
+- `03_konzepte_authorC.tex` – Konzept C
+
+**04_implementierung.tex** – Implementierung  
+Technische Implementierungsdetails und verwendete Technologien.
+- `04_implementierung_authorA.tex` – Implementierung A
+- `04_implementierung_authorB.tex` – Implementierung B
+
+**05_prototyp.tex** – Prototyp und Ergebnisse  
+Prototypbeschreibung, Testverfahren und erreichte Ergebnisse.
+- `05_prototyp_authorA.tex` – Prototyp A
+- `05_prototyp_authorB.tex` – Prototyp B
+
+**06_conclusion.tex** – Zusammenfassung und Fazit  
+Zusammenfassung der Ergebnisse, kritische Würdigung und Ausblick.
+
+**07_projectmanagement.tex** – Projektmanagement  
+Meilensteinplan, Zeiterfassung und Projektdokumentation (deutsche Beschreibungen).
+
+#### Spezielle Kapitel
+- `99_acknowledgements.tex` – Danksagungen (deutsch)
+- `99_authors.tex` – Autorenangaben
+- `99_beispielhafte_inhalte.tex` – Beispielkapitel mit Best Practices  
+  Demonstriert: Korrekte Zitationen, Abbildungseinbindung, Code-Listings, Fußnoten
 
 ### Konfiguration: `includes/`
 
@@ -152,6 +174,7 @@ Demonstriert Best Practices für:
 Zentrale Konfigurationsdatei mit:
 - LaTeX-Paketen (graphicx, listings, hyperref, etc.)
 - Farb- und Schriftdefinitionen
+- **Placeholder-Box Befehl** für Beispielinhalte
 - Listings-Konfiguration
 - Kopf- und Fußzeilen-Einstellungen
 - Makros und Befehle
@@ -167,6 +190,27 @@ Zentrale Konfigurationsdatei mit:
 % Code-Highlighting
 \lstset{...}  % Farben, Schriften, Sprachen konfigurieren
 ```
+
+**Neue Funktion: Placeholder-Box für Beispielinhalte**
+
+Die `\placeholderbox` wird verwendet, um Beispielinhalte hervorzuheben, die von Studierenden ersetzt werden können:
+
+```latex
+\placeholderbox{Beispieltitel}{
+Hier steht der Beispielinhalt, den die Studierenden durch eigene Inhalte ersetzen.
+Dies kann über mehrere Absätze gehen.
+}
+```
+
+**Parameter:**
+- Parameter 1: Titel der Box (wird in rotem Text oben angezeigt)
+- Parameter 2: Der Beispielinhalt (wird in einer roten Box eingefasst)
+
+**Styling:**
+- Rote Einfassung (Farbe: RGB 220, 53, 69)
+- Padding: 6pt
+- Automatischer Zeilenumbruch
+- Ideal für Ersatzbeispiele und Template-Inhalte
 
 ### Medien: `media/`
 - `images/` – Abbildungsdateien (.pdf, .png, .jpg)
@@ -192,7 +236,34 @@ Lorem ipsum...
 ...
 ```
 
-### 2. Literaturquellen hinzufügen
+### 2. Mit Placeholder-Boxen arbeiten (Beispielinhalte ersetzen)
+
+Das Template enthält rote Placeholder-Boxen, die zeigen, wo Beispielinhalte von den Studierenden hinzugefügt werden sollen:
+
+```latex
+\placeholderbox{Beispieltitel}{
+Dies ist ein Beispielinhalt, der ersetzt werden soll.
+Die Box zeigt visuell, wo eigene Inhalte eingefügt werden.
+}
+```
+
+**Zum Ersetzen:**
+
+1. Öffnen Sie das betreffende Kapitel
+2. Ersetzen Sie den Text in den `\placeholderbox{...}{...}` Befehlen
+3. Sie können die Box auch komplett durch normalen Text ersetzen:
+
+```latex
+% VOR (mit Box):
+\placeholderbox{Mein Titel}{Beispieltext}
+
+% NACH (ohne Box):
+Der echte Inhalt der Diplomarbeit...
+```
+
+**Beispiele:** In jedem Kapitel von 01 bis 07 finden Sie Placeholder-Boxen mit thematischen Vorlagen.
+
+### 3. Literaturquellen hinzufügen
 Fügen Sie Einträge in `literature.bib` hinzu:
 ```bibtex
 @book{doe2020,
@@ -208,7 +279,7 @@ Zitieren im Text:
 Laut einer Studie \cite{doe2020} ...
 ```
 
-### 3. Abbildungen und Code einfügen
+### 4. Abbildungen und Code einfügen
 
 **Abbildungen:**
 ```latex
@@ -227,7 +298,7 @@ Siehe Abbildung \ref{fig:mydiagram}.
 \lstinputlisting[language=JavaScript,caption={My Code}]{./media/code_snippets/app.js}
 ```
 
-### 4. Bauen und Überprüfen
+### 5. Bauen und Überprüfen
 ```bash
 latexmk -pdf -g -output-directory=build diplomarbeit.tex
 ```
@@ -278,6 +349,98 @@ Das PDF wird unter `build/diplomarbeit.pdf` erzeugt.
   \item Punkt 2
 \end{enumerate}
 ```
+
+---
+
+## Projektmanagement-Dokumentation (Kapitel 07)
+
+Das Kapitel `07_projectmanagement.tex` dokumentiert die Projektplanung und wird auf Deutsch verfasst.
+
+### Meilensteinplan
+Eine Übersicht über die wichtigsten Projektphasen mit Zeitplänen:
+
+| Meilenstein | Start | Ende | Dauer |
+|---|---|---|---|
+| Konzeptentwicklung | KW 5 | KW 8 | 4 Wochen |
+| Implementierung | KW 9 | KW 14 | 6 Wochen |
+| Testing & Debugging | KW 15 | KW 17 | 3 Wochen |
+
+**Anpassen:** Ersetzen Sie die KW-Nummern und Dauern durch Ihre eigenen Meilensteine.
+
+### Zeiterfassung
+Dokumentiert die wöchentliche Arbeitszeit und den Fortschritt:
+
+| Woche | Schüler:in A (h) | Schüler:in B (h) | Gesamt (h) | Fortschritt |
+|---|---|---|---|---|
+| KW 5-6 | 20 | 20 | 40 | Konzeptentwicklung |
+| KW 9-10 | 22 | 18 | 40 | Implementierung Phase 1 |
+
+**Tipp:** Aktualisieren Sie diese Tabelle regelmäßig, um den Projektstatus zu dokumentieren.
+
+---
+
+## Schnelleinstieg für neue Kapitel
+
+Wenn Sie ein neues Kapitel erstellen oder eines anpassen möchten, folgen Sie diesem Muster:
+
+```latex
+\chapter{Zu ersetzender Kapiteltitel}
+
+\emph{Dies ist eine Zusammenfassung des Inhalts dieses Kapitels. 
+Hier wird erklärt, was die Lesenden in diesem Kapitel erwartet.}
+
+\section{Erste Sektion}
+
+\emph{Beschreibung des Abschnitts.}
+
+\placeholderbox{Beispielabschnitt}{
+Hier steht ein Beispielinhalt, der zeigt, was von den 
+Studierenden erwartet wird. Dieser Text wird in einer 
+roten Box formatiert und signalisiert, dass er ersetzt 
+werden sollte.
+}
+
+\section{Zweite Sektion}
+
+\emph{Weitere Beschreibung.}
+
+\placeholderbox{Weiteres Beispiel}{
+Weiterer Beispieltext, der durch eigene Inhalte ersetzt wird.
+}
+```
+
+**Muster:**
+1. Kapitelüberschrift mit `\chapter{...}`
+2. Kurze Zusammenfassung in `\emph{...}`
+3. `\section{Titel}` für Abschnitte
+4. Abteilungsbeschreibung in `\emph{...}`
+5. `\placeholderbox{Titel}{Beispielinhalt}` für Ersatzbeispiele
+6. Wiederholen Sie 3-5 für weitere Abschnitte
+
+---
+
+## Zusammenarbeit mit mehreren Autoren
+
+Dieses Template unterstützt Multi-Autor-Projekte durch eine modular Struktur:
+
+### Kapitel mit Autor-Spezifischen Versionen
+
+Einige Kapitel haben separate Versionen für verschiedene Autoren:
+
+- **Konzepte:** `03_konzepte_authorA/B/C.tex` – Jeder Autor entwickelt einen Lösungsansatz
+- **Implementierung:** `04_implementierung_authorA/B.tex` – Implementierungsdetails pro Autor
+- **Prototyp:** `05_prototyp_authorA/B.tex` – Ergebnisse und Tests pro Autor
+
+Das Hauptkapitel (z.B. `03_konzepte.tex`) führt alle Autor-Dateien zusammen.
+
+### Workflow für Mehrautoren-Projekte
+
+1. **Aufgaben verteilen:** Jeder Autor arbeitet an seiner eigenen `_authorX.tex` Datei
+2. **Parallel entwickeln:** Keine Konflikte, da jeder seine eigene Datei hat
+3. **Im Hauptkapitel zusammenführen:** Die Partner-Datei (`03_konzepte.tex`) nutzt `\input` um alle Versionen einzubinden
+4. **Evaluation/Vergleich:** Im Hauptkapitel können Vergleichstabellen die Unterschiede hervorheben
+
+**Tipp:** Nutzen Sie Git für Versionskontrolle und um Konflikte zu vermeiden!
 
 ---
 
