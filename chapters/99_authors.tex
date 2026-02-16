@@ -4,7 +4,10 @@
 \addcontentsline{toc}{chapter}{CV}
 
 
-\htlParagraph{Frieda Fröhlich}
+% --------------------------------------------------------
+% Authoreninformationen und Lebenslauf Author A
+% --------------------------------------------------------
+\htlParagraph{\htlAuthorNameA}
 
 \renewcommand{\arraystretch}{1.2}
 \begin{tabularx}{1\textwidth}{@{} l X l @{}}
@@ -16,13 +19,16 @@
 \emph{Schulbildung:} & Volksschule \newline Hauptschule \newline HTL & \\
 \emph{Praktika:} & Firmenname, Zeit, Tätigkeit & \\
 \emph{Anschrift:} & Strasse Nummer\newline PLZ, Ort\newline Österreich & \\
-\emph{E-Mail:} & frieda@froehlich.com & \\
+\emph{E-Mail:} & max@mustermann.com & \\
 
 \end{tabularx}
 \\\\
 
-
-\htlParagraph{Max Mustermann}
+% --------------------------------------------------------
+% Authoreninformationen und Lebenslauf Author B
+% --------------------------------------------------------
+\ifdef{\htlAuthorNameB}{
+\htlParagraph{\htlAuthorNameB}
 
 \begin{tabularx}{1\textwidth}{@{} l X l @{}}
 \emph{Geburtstag, Geburtsort:} & 01.01.1970, Braunau am Inn & 
@@ -32,13 +38,18 @@
 \emph{Schulbildung:} & Volksschule \newline Hauptschule \newline HTL & \\
 \emph{Praktika:} & Firmenname, Zeit, Tätigkeit & \\
 \emph{Anschrift:} & Strasse Nummer\newline PLZ, Ort\newline Österreich & \\
-\emph{E-Mail:} & max@mustermann.com & \\
+\emph{E-Mail:} & frieda@froehlich.com & \\
 
 \end{tabularx}
+}{}%
 
 
+% --------------------------------------------------------
+% Authoreninformationen und Lebenslauf Author C
+% --------------------------------------------------------
+\ifdef{\htlAuthorNameC}{
 \pagebreak
-\htlParagraph{Max Mustermann}
+\htlParagraph{\htlAuthorNameC}
 
 \begin{tabularx}{1\textwidth}{@{} l X l @{}}
 \emph{Geburtstag, Geburtsort:} & 01.01.1970, Braunau am Inn & 
@@ -48,6 +59,29 @@
 \emph{Schulbildung:} & Volksschule \newline Hauptschule \newline HTL & \\
 \emph{Praktika:} & Firmenname, Zeit, Tätigkeit & \\
 \emph{Anschrift:} & Strasse Nummer\newline PLZ, Ort\newline Österreich & \\
-\emph{E-Mail:} & max@mustermann.com & \\
+\emph{E-Mail:} & fritz@einstein.com & \\
 
 \end{tabularx}
+\\\\
+}{}%
+
+
+% --------------------------------------------------------
+% Authoreninformationen und Lebenslauf Author D
+% --------------------------------------------------------
+\ifdef{\htlAuthorNameD}{
+\htlParagraph{\htlAuthorNameD}
+
+\begin{tabularx}{1\textwidth}{@{} l X l @{}}
+\emph{Geburtstag, Geburtsort:} & 01.01.1970, Braunau am Inn & 
+\multirow{5}{2.5cm}{\includegraphics[width=2.5cm]{./media/images/einstein.jpg}
+} 
+\\
+\emph{Schulbildung:} & Volksschule \newline Hauptschule \newline HTL & \\
+\emph{Praktika:} & Firmenname, Zeit, Tätigkeit & \\
+\emph{Anschrift:} & Strasse Nummer\newline PLZ, Ort\newline Österreich & \\
+\emph{E-Mail:} & eva@auer.com & \\
+
+\end{tabularx}
+\\\\
+}{}%

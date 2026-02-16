@@ -41,7 +41,6 @@ HTL-Braunau-DA-LaTeX-Template/
 │   ├── 03_konzepte.tex          # Konzepte und Lösungsansätze
 │   ├── 03_konzepte_authorA.tex  # Konzept A (Autor A)
 │   ├── 03_konzepte_authorB.tex  # Konzept B (Autor B)
-│   ├── 03_konzepte_authorC.tex  # Konzept C (Autor C)
 │   ├── 04_implementierung.tex   # Implementierung
 │   ├── 04_implementierung_authorA.tex  # Implementierung A (Autor A)
 │   ├── 04_implementierung_authorB.tex  # Implementierung B (Autor B)
@@ -53,9 +52,8 @@ HTL-Braunau-DA-LaTeX-Template/
 │   ├── 99_acknowledgements.tex  # Danksagungen
 │   ├── 99_authors.tex           # Autorenangaben
 │   ├── 99_beispielhafte_inhalte.tex  # Beispielkapitel (Best Practices)
-│   └── Post-01-literatur.tex    # Literaturverzeichnis
 │
-├── includes/                     # Konfiguration und Definitionen
+├── includes/                    # Konfiguration und Definitionen
 │   ├── htl_definintions.tex    # LaTeX-Pakete und Konfigurationen
 │   └── htl_c_cmyk_rein.pdf     # HTL-Logo
 │
@@ -65,10 +63,7 @@ HTL-Braunau-DA-LaTeX-Template/
 │
 └── build/                        # Build-Verzeichnis
     ├── diplomarbeit.pdf        # Generiertes PDF
-    ├── diplomarbeit.aux        # Hilfsdaten
-    ├── diplomarbeit.bbl        # Bibliographie-Daten
-    ├── diplomarbeit.fdb_latexmk # Build-Cache
-    └── literature.bib          # Symlink zur Bibliographie
+
 ```
 
 ---

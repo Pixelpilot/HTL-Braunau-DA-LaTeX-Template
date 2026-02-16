@@ -40,6 +40,7 @@
 \usepackage{float} % für \begin{figure}[H]
 \usepackage{fancyhdr}
 \usepackage{lipsum}
+\usepackage{footnote} % für Fußnoten in Boxen
 
 \usepackage{multicol} % für mehrspaltige Texte
 
@@ -127,6 +128,7 @@
 %	Roter Rahmen für beispielhafte Inhalte (von Schüler:innen zu ersetzen)
 \newcommand{\placeholderbox}[2]{%
     \par\vspace{0.5\baselineskip}%
+    \begin{savenotes}%
     {\setlength{\fboxsep}{6pt}%
     \noindent\fcolorbox{placeholderred}{white}{%
         \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{%
@@ -134,6 +136,7 @@
             {\tiny\color{placeholderred}\textbf{#1}}\par\nointerlineskip\vspace{0.5\baselineskip} #2%
         }%
     }}%
+    \end{savenotes}%
     \par\vspace{0.5\baselineskip}%
 }
 

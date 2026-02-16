@@ -1,13 +1,13 @@
 % !TEX root = ../diplomarbeit.tex
 
-%	########################################################
-% 			INFO: Zitieren, Abbildungen, Listing
-%	########################################################
+% --------------------------------------------------------
+%   INFO: Zitieren, Abbildungen, Listing
+%	--------------------------------------------------------
 
 
-%	########################################################
-% 	Überschrift, Inhaltsverzeichnis
-%	########################################################
+%	--------------------------------------------------------
+%   Überschrift, Inhaltsverzeichnis
+%	--------------------------------------------------------
 \chapter*{Beispielhafte Inhalte: Zitieren, Abbildungen, Quelltext}\label{ref:zitieren}
 \addcontentsline{toc}{chapter}{Zitieren, Abbildungen, Quelltext}
 
@@ -21,22 +21,30 @@ Das Literatur-, Abbildungs- und Listingsverzeichnis sind am Ende der Arbeit zu f
 Auch beschrieben wird, wie mit KI-generierten Inhalten umzugehen ist. Alle KI-generierten Inhalte müssen als solche gekennzeichnet werden, um Transparenz zu gewährleisten.
 }
 
-%	########################################################
+%	--------------------------------------------------------
 % 	Inhalt 
-%	########################################################
+%	--------------------------------------------------------
+
+% --------------------------------------------------------
+% TODO: Beschreibung für diesen Abschnitt hinzufügen
+% --------------------------------------------------------
 \section*{Abbildungen}\label{ref:abbildungen}
 
 Abbildung sind mit einer Abbildungsnummer und einer Unterschrift zu versehen die kurz die Abbildung beschreibt. 
 Abbildungen gehören zum umgebenden Text und müssen dort erwähnt werden.
 
+\placeholderbox{Beispiel}{
 Beispiel: In Abbildung \ref{htl01} wird das Logo der HTL Braunau dargestellt.
+}
 
 Wird auf eine Abbildung referenziert die sich weiter von der aktuellen Textstelle entfernt befindet so kann auch die Seitennummer hinzugefügt werden.
 
+\placeholderbox{Beispiel}{
 Beispiel: Siehe Abbildung \ref{htl01} auf Seite \pageref{htl01}.
+}
 
 
-%	########################################################
+%	--------------------------------------------------------
 %	Eine Abbildung
 \begin{figure}[H]
 	\centering
@@ -46,7 +54,7 @@ Beispiel: Siehe Abbildung \ref{htl01} auf Seite \pageref{htl01}.
 \end{figure}
 
 
-%	########################################################
+%	--------------------------------------------------------
 %	Zwei Abbildungen
 
 \begin{figure}[H]
@@ -60,7 +68,7 @@ Beispiel: Siehe Abbildung \ref{htl01} auf Seite \pageref{htl01}.
 \end{figure}
 
 
-%	########################################################
+%	--------------------------------------------------------
 %	Drei Abbildungen
 \begin{figure}[H]
   \centering
@@ -74,6 +82,9 @@ Beispiel: Siehe Abbildung \ref{htl01} auf Seite \pageref{htl01}.
 \end{figure}
 
 
+% --------------------------------------------------------
+%   Zitate, Quellen, Fußnoten
+% --------------------------------------------------------
 \section*{Zitate, Quellen, Fußnoten}
 
 Zitation dient der Nachvollziehbarkeit und ist verpflichtend, sobald fremde
@@ -88,49 +99,59 @@ Klammern) und verweisen Sie immer auf das Literaturverzeichnis.
   \item Direkte Zitate sind selten und müssen wörtlich übernommen werden.
   \item Paraphrasen sind bevorzugt, aber ebenfalls zu belegen.
   \item Längere Zitate werden als Blockzitat gesetzt.
-  \item Verkürzungen in Zitaten werden mit [...] gekennzeichnet.
+  \item Verkürzungen in Zitaten werden mit [\ldots] gekennzeichnet.
 \end{itemize}
 
+\placeholderbox{Beispiel für Quellenangabe}{
 Quellenangaben gehören immer ins Literaturverzeichnis, das automatisch aus den verwendeten Zitationen erstellt wird \cite{bib:wikilitverz}.
+}
 
+\placeholderbox{Beispiel für Quellenangabe}{
 Das Verwenden fremden Gedankenguts ohne Quellenangabe ist ein Plagiat und kann
 rechtliche Folgen haben \cite{bib:wikiplagiat}.
-
+}
 \subsection*{Praktische Beispiele}
 
-\textbf{Beispiel 1: Längeres Zitat mit Verkürzung und anschließender Einordnung}
+\placeholderbox{Längeres Zitat mit Verkürzung und anschließender Einordnung}{
+\textbf{Navigation in Single-Page-Websites}
 
 \begin{quotation}
 \noindent
-\emph{\glqq We tend to think of navigating a website as clicking from page-to-page via some kind of global navigation [...] When it comes to a single page, we often think scrolling is the one and only way to move from one end to the next.\grqq}~\cite{bib:bradley1}
+\emph{\glqq We tend to think of navigating a website as clicking from page-to-page via some kind of global navigation [\ldots] When it comes to a single page, we often think scrolling is the one and only way to move from one end to the next.\grqq}~\cite{bib:bradley1}
 \end{quotation}
 
 Der Autor betont, dass Nutzer:innen Navigation oft mit klassischen Menüs gleichsetzen. Für unser Projekt bedeutet das, dass bei One-Page-Designs klare Orientierungspunkte (z. B. Abschnittsmarker oder
 Kurz-Links) notwendig sind, um den roten Faden der Nutzung zu sichern.
+}
 
-\textbf{Kurzregeln zu Footnotes vs. Zitation:}
+\subsection*{Kurzregeln zu Footnotes vs. Zitation:}
 
 \begin{itemize}
   \item Zitate verwenden, wenn eine Aussage, Zahl oder Idee aus einer
   Quelle stammt und nachprüfbar belegt werden muss.
-  \item Fußnoten \footnote{Kurze Nebeninformationen werden in Footnotes gegeben} verwenden, wenn eine kurze Nebeninformation, ein
-  Begriffshinweis oder eine ergänzende Erklärung den Lesefluss sonst stören
-  würde.
+  \item Fußnoten verwenden, wenn eine kurze Nebeninformation, ein Begriffshinweis oder eine ergänzende Erklärung den Lesefluss sonst stören würde.
 \end{itemize}
 
-\textbf{Beispiel 2: Begriffserklärung als Fußnote}
+\placeholderbox{Kurze Nebeninformationen als Fußnote}{
+Die Implementierung erfolgte in Python 3.11\footnote{Verwendet wurde die offizielle Distribution von python.org, Version 3.11.4}, da diese Version zum Zeitpunkt der Entwicklung die aktuellste stabile Version war.
+}
 
-In diesem Abschnitt wird der
-Begriff \emph{NPR} verwendet.\footnote{NPR steht für \emph{Non-photorealistic
+\placeholderbox{Begriffserklärung als Fußnote}{
+In diesem Abschnitt wird der Begriff \emph{NPR} verwendet.\footnote{NPR steht für \emph{Non-photorealistic
 Rendering} und beschreibt Techniken, die bewusst nicht fotorealistisch wirken.}
+}
 
-\textbf{Beispiel 3: Methodischer Hinweis als Fußnote}
-
-Die Messwerte wurden in einer
-Testumgebung erhoben.\footnote{Die Tests liefen auf einem isolierten System ohne
+\placeholderbox{Methodischer Hinweis als Fußnote}{
+Die Messwerte wurden in einer Testumgebung erhoben.\footnote{Die Tests liefen auf einem isolierten System ohne
 Produktivlast; Ergebnisse sind daher nur bedingt auf den Live-Betrieb
 übertragbar.}
+}
 
+
+
+% --------------------------------------------------------
+%   Künstliche Intelligenz in akademischen Arbeiten
+% --------------------------------------------------------
 \subsection*{Künstliche Intelligenz in akademischen Arbeiten}
 
 Der Einsatz von KI-Tools (wie Large Language Models, Bildgeneratoren oder Code-Assistenten) nimmt in akademischen Arbeiten zu. Diese Tools können bei Recherche, Ideenfindung, Code-Generierung und Texterstellung unterstützen. 
@@ -144,17 +165,21 @@ Die Fußnote sollte folgende Informationen enthalten:
   \item Bearbeitung durch den Autor (falls zutreffend)
 \end{itemize}
 
-\textbf{Beispiel: Absatz mit KI-Unterstützung}
-
-\noindent
+\placeholderbox{Beispiel für Absatz mit KI-Unterstützung}{
 KI-Systeme revolutionieren die Art und Weise, wie wir Informationen verarbeiten und Entscheidungen treffen. Durch ihre Fähigkeit zur Mustererkennung und Datenanalyse ermöglichen sie schnellere und präzisere Lösungen in verschiedensten Anwendungsbereichen.\footnote{Dieser Absatz basiert auf einer Anfrage an Claude Haiku 4.5 vom 12.02.2026 mit dem Prompt: \glqq Schreibe einen einleitenden Absatz über die Auswirkungen von KI auf Informationsverarbeitung und Entscheidungsfindung.\grqq ~Das Ergebnis wurde für akademische Zwecke angepasst und auf Korrektheit überprüft.}
+}
+
 
 Diese Integration von KI in wissenschaftliche Arbeiten erfordert aber kritisches Denken und Verantwortung. Der Autor bleibt für alle verwendeten Inhalte verantwortlich, auch wenn diese mit KI-Unterstützung erstellt wurden.
 
 
-%	########################################################
+%	--------------------------------------------------------
 %	Listings, Code
-%	########################################################
+%	--------------------------------------------------------
+
+% --------------------------------------------------------
+% TODO: Beschreibung für diesen Abschnitt hinzufügen
+% --------------------------------------------------------
 \section*{Listings, Code}
 
 Quelltext ist ein wesentlicher Bestandteil einer Informatik Diplomarbeit.
@@ -165,7 +190,7 @@ Ebenfalls müssen sie im Text referenziert werden.
 
 Listing \ref{code:helloworld} auf Seite \pageref{code:helloworld} zeigt ein Hallo Welt Programm.
 
-%	########################################################
+%	--------------------------------------------------------
 %	C++
 \begin{minipage}{\linewidth}
 \lstinputlisting[language=C++,caption={Mein erstes C-Programm.},label=code:helloworld]{./media/code_snippets/bsp_01.cpp}
@@ -199,17 +224,17 @@ function getMousePos(canvas, evt) {
 \end{lstlisting}
 
 
-%	########################################################
+%	--------------------------------------------------------
 %	CSS
 \lstinputlisting[language=CSS,caption={Kurzer CSS--Quelltext.}]{./media/code_snippets/bsp.css}
 
 
-%	########################################################
+%	--------------------------------------------------------
 %	HTML
 \lstinputlisting[language=HTML,caption={HTML--Quelltext}]{./media/code_snippets/bsp.html}
 
 
-%	########################################################
+%	--------------------------------------------------------
 %	HTML
 \lstinputlisting[language=JavaScript,caption={JavaScript--Quelltext}]{./media/code_snippets/bsp.js}
 
