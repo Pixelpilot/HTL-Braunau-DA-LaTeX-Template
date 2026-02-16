@@ -13,7 +13,7 @@ Diese Vorlage ist eine professionelle LaTeX-Umgebung für die Erstellung von Dip
 ### Besonderheiten
 - KOMA-Script Dokumentenklasse (`scrbook`)
 - Deutsche Lokalisierung (Babel)
-- **Placeholder-Box System** für Beispielinhalte (rote Rahmen mit `\placeholderbox`)
+- Placeholder-Box für Beispielinhalte (roter Rahmen mit `\placeholderbox`)
 - Numerische Zitationen mit BibTeX
 - Automatische Verzeichnisse (Inhalts-, Abbildungs-, Listings-, Literaturverzeichnis)
 - Code-Highlighting mit `listings`
@@ -66,16 +66,21 @@ HTL-Braunau-DA-LaTeX-Template/
 
 ```
 
----
+
 
 ## Schnelleinstieg
 
-### Voraussetzungen
+### Arbeiten mit Online-Editoren
+Um mit Online-Editoren wie z.B. https://de.overleaf.com/ arbeiten zu können müssen alle Dateien hochgeladen werden.
+
+### Lokaler Editor
+
+#### Voraussetzungen
 - **TeX Live** oder **MikTeX** (aktuelle Version)
 - **latexmk** (Automatisiertes Build-System)
 - Editor: VS Code mit LaTeX Workshop oder ähnlich
 
-### Build durchführen
+#### Build durchführen
 
 ```bash
 # Im Projektverzeichnis:
@@ -85,7 +90,7 @@ latexmk -pdf -g -output-directory=build diplomarbeit.tex
 
 Das PDF wird unter `build/diplomarbeit.pdf` generiert.
 
----
+
 
 ## Dateienbeschreibungen
 
@@ -102,22 +107,23 @@ Die zentrale Datei, die alle Komponenten zusammenführt:
 BibTeX-Format-Datei für alle Quellenangaben:
 
 ```bibtex
-@article{bib:hanl2004npr,
-  author = {Hanl, Christian and others},
-  title = {Non-photorealistic Rendering Techniques},
-  journal = {Computer Graphics Forum},
-  year = {2004}
+% Website
+@misc{bib:latexintro,
+  author = {T. Oetiker, et al.},
+  title = {The not so short introduction into LaTeX},
+  howpublished = "\\\url{https://tobi.oetiker.ch/lshort/lshort.pdf}"
 }
 
-@misc{bib:bradleys1,
-  author = {Bradley, Steven},
-  title = {Website Navigation and User Experience},
-  url = {https://www.vanseo-design.com},
-  year = {2015}
+% Book
+@book{bib:uhlenbruck1,
+  author = {Gerhard Uhlenbruck},
+  year = {2005},
+  title = {Kein Blatt vor den Mund nehmen},
+  publisher = {Ralf Reglin Verlag Köln}
 }
 ```
 
-Zitate im Text: `\cite{bib:haller2004npr}` → wird automatisch zu [1]
+Zitate im Text: `\cite{bib:latexintro}` → wird automatisch zu [1]
 
 ### Kapitel: `chapters/`
 
@@ -135,10 +141,9 @@ Motivation, Problemstellung und Zielsetzung mit Kapitelgliederung.
 Begriffsdefinitionen, State of the Art, theoretische und technologische Grundlagen.
 
 **03_konzepte.tex** – Konzepte und Lösungsansätze  
-Führt mehrere Konzeptansätze zusammen (Autor A, B, C) mit Evaluierungstabelle.
+Führt mehrere Konzeptansätze zusammen (Autor A, B, ...) mit Evaluierungstabelle.
 - `03_konzepte_authorA.tex` – Konzept A
 - `03_konzepte_authorB.tex` – Konzept B  
-- `03_konzepte_authorC.tex` – Konzept C
 
 **04_implementierung.tex** – Implementierung  
 Technische Implementierungsdetails und verwendete Technologien.
@@ -165,46 +170,15 @@ Meilensteinplan, Zeiterfassung und Projektdokumentation (deutsche Beschreibungen
 ### Konfiguration: `includes/`
 
 #### `htl_definintions.tex`
+Im Regelfall ist es nicht notwendig diese Datei anzupassen
+
 Zentrale Konfigurationsdatei mit:
 - LaTeX-Paketen (graphicx, listings, hyperref, etc.)
 - Farb- und Schriftdefinitionen
-- **Placeholder-Box Befehl** für Beispielinhalte
+- Placeholder-Box Befehl für Beispielinhalte
 - Listings-Konfiguration
 - Kopf- und Fußzeilen-Einstellungen
 - Makros und Befehle
-
-**Wichtige Einstellungen anpassen:**
-```tex
-% Sprache
-\usepackage[german]{babel}
-
-% Schriftart (optional)
-% \usepackage{helvet}  % Helvetica verwenden
-
-% Code-Highlighting
-\lstset{...}  % Farben, Schriften, Sprachen konfigurieren
-```
-
-**Neue Funktion: Placeholder-Box für Beispielinhalte**
-
-Die `\placeholderbox` wird verwendet, um Beispielinhalte hervorzuheben, die von Studierenden ersetzt werden können:
-
-```latex
-\placeholderbox{Beispieltitel}{
-Hier steht der Beispielinhalt, den die Studierenden durch eigene Inhalte ersetzen.
-Dies kann über mehrere Absätze gehen.
-}
-```
-
-**Parameter:**
-- Parameter 1: Titel der Box (wird in rotem Text oben angezeigt)
-- Parameter 2: Der Beispielinhalt (wird in einer roten Box eingefasst)
-
-**Styling:**
-- Rote Einfassung (Farbe: RGB 220, 53, 69)
-- Padding: 6pt
-- Automatischer Zeilenumbruch
-- Ideal für Ersatzbeispiele und Template-Inhalte
 
 ### Medien: `media/`
 - `images/` – Abbildungsdateien (.pdf, .png, .jpg)
@@ -216,7 +190,7 @@ Verwendung in Dokumenten:
 \lstinputlisting[language=Python]{./media/code_snippets/example.py}
 ```
 
----
+
 
 ## Arbeitsablauf
 
@@ -299,7 +273,6 @@ latexmk -pdf -g -output-directory=build diplomarbeit.tex
 
 Das PDF wird unter `build/diplomarbeit.pdf` erzeugt.
 
----
 
 ## Wichtige LaTeX-Befehle
 
@@ -344,8 +317,6 @@ Das PDF wird unter `build/diplomarbeit.pdf` erzeugt.
 \end{enumerate}
 ```
 
----
-
 ## Projektmanagement-Dokumentation (Kapitel 07)
 
 Das Kapitel `07_projectmanagement.tex` dokumentiert die Projektplanung und wird auf Deutsch verfasst.
@@ -353,63 +324,28 @@ Das Kapitel `07_projectmanagement.tex` dokumentiert die Projektplanung und wird 
 ### Meilensteinplan
 Eine Übersicht über die wichtigsten Projektphasen mit Zeitplänen:
 
-| Meilenstein | Start | Ende | Dauer |
-|---|---|---|---|
-| Konzeptentwicklung | KW 5 | KW 8 | 4 Wochen |
-| Implementierung | KW 9 | KW 14 | 6 Wochen |
-| Testing & Debugging | KW 15 | KW 17 | 3 Wochen |
+| Meilenstein | Beschreibung | Termin |
+|---|---|---|
+| Requirement-Analyse | Anforderungen definieren und dokumentieren | KW 22 |
+| Konzeptphase | Verschiedene Lösungsansätze entwickeln und bewerten | KW 25 |
+| Implementierung Phase 1 | Kernfunktionalitäten umsetzen | KW 33 |
+| Implementierung Phase 2 | Optimierung und erweiterte Features | KW 36 |
+| Prototyp & Testing | Tests durchführen und Ergebnisse dokumentieren | KW 50 |
+| Dokumentation | Diplomarbeit finalisieren | KW 04 |
+| Abgabe | Finale Abgabe | KW 13 |
 
-**Anpassen:** Ersetzen Sie die KW-Nummern und Dauern durch Ihre eigenen Meilensteine.
 
 ### Zeiterfassung
 Dokumentiert die wöchentliche Arbeitszeit und den Fortschritt:
 
-| Woche | Schüler:in A (h) | Schüler:in B (h) | Gesamt (h) | Fortschritt |
-|---|---|---|---|---|
-| KW 5-6 | 20 | 20 | 40 | Konzeptentwicklung |
-| KW 9-10 | 22 | 18 | 40 | Implementierung Phase 1 |
+| Woche | Schule (h) | Freizeit (h) | Aufgabenbeschreibung |
+|---|---|---|---|
+| KW 22 | 10 | 2 | Anforderungsanalyse, Meetings mit Betreuung |
+| KW 23 | 10 | 4 | Recherche State of the Art, Literature Review |
+| KW 24 | 12 | 3 | Konzepterstellung und Designphase |
+| KW 25 | 14 | 5 | Implementierung und Coding |
+| KW 26 | 11 | 6 | Testing und Dokumentation |
 
-**Tipp:** Aktualisieren Sie diese Tabelle regelmäßig, um den Projektstatus zu dokumentieren.
-
----
-
-## Schnelleinstieg für neue Kapitel
-
-Wenn Sie ein neues Kapitel erstellen oder eines anpassen möchten, folgen Sie diesem Muster:
-
-```latex
-\chapter{Zu ersetzender Kapiteltitel}
-
-\emph{Dies ist eine Zusammenfassung des Inhalts dieses Kapitels. 
-Hier wird erklärt, was die Lesenden in diesem Kapitel erwartet.}
-
-\section{Erste Sektion}
-
-\emph{Beschreibung des Abschnitts.}
-
-\placeholderbox{Beispielabschnitt}{
-Hier steht ein Beispielinhalt, der zeigt, was von den 
-Studierenden erwartet wird. Dieser Text wird in einer 
-roten Box formatiert und signalisiert, dass er ersetzt 
-werden sollte.
-}
-
-\section{Zweite Sektion}
-
-\emph{Weitere Beschreibung.}
-
-\placeholderbox{Weiteres Beispiel}{
-Weiterer Beispieltext, der durch eigene Inhalte ersetzt wird.
-}
-```
-
-**Muster:**
-1. Kapitelüberschrift mit `\chapter{...}`
-2. Kurze Zusammenfassung in `\emph{...}`
-3. `\section{Titel}` für Abschnitte
-4. Abteilungsbeschreibung in `\emph{...}`
-5. `\placeholderbox{Titel}{Beispielinhalt}` für Ersatzbeispiele
-6. Wiederholen Sie 3-5 für weitere Abschnitte
 
 ---
 
@@ -421,7 +357,7 @@ Dieses Template unterstützt Multi-Autor-Projekte durch eine modular Struktur:
 
 Einige Kapitel haben separate Versionen für verschiedene Autoren:
 
-- **Konzepte:** `03_konzepte_authorA/B/C.tex` – Jeder Autor entwickelt einen Lösungsansatz
+- **Konzepte:** `03_konzepte_authorA/B.tex` – Jeder Autor entwickelt einen Lösungsansatz
 - **Implementierung:** `04_implementierung_authorA/B.tex` – Implementierungsdetails pro Autor
 - **Prototyp:** `05_prototyp_authorA/B.tex` – Ergebnisse und Tests pro Autor
 
@@ -454,10 +390,10 @@ klare Orientierungspunkte notwendig sind.
 ```
 
 ### Abbildungen
-- Verwenden Sie beschreibende Caption-Texte
-- Referenzieren Sie jede Abbildung im Text
-- Nutzen Sie PDF-Format für Vektorgrafiken
-- Benennen Sie Dateien aussagekräftig
+- Verwendung beschreibender Caption-Texte
+- Referenzierung jeder Abbildung im Text
+- Verwendung von PDF-Format für Vektorgrafiken
+- Aussagekräftige Benennung von Dateien
 
 ### Vergebenheit von Labels
 1. **Abbildungen:** `\label{fig:deskriptivername}`
@@ -492,39 +428,6 @@ und für akademische Zwecke angepasst.}
 
 ---
 
-## Häufige Probleme und Lösungen
-
-### Bibliographie zeigt [?]
-- **Problem:** BibTeX kann `literature.bib` nicht finden
-- **Lösung:** Stellen Sie sicher, dass `build/literature.bib` als Symlink existiert
-  ```bash
-  ln -sf ../literature.bib build/literature.bib
-  ```
-
-### Abbildungen werden nicht angezeigt
-- Überprüfen Sie, dass der Pfad korrekt ist: `./media/images/filename.pdf`
-- Verwenden Sie `[H]` für feste Positionierung: `\begin{figure}[H]`
-- Stellen Sie sicher, dass die Bilddatei existiert
-
-### Build-Fehler
-- Löschen Sie den `build/`-Ordner und bauen Sie neu: `rm -rf build && latexmk ...`
-- Überprüfen Sie die Syntax in Ihren `.tex`-Dateien
-- Konsultieren Sie die Logdatei: `build/diplomarbeit.log`
-
----
-
 ## Lizenz
 
 Diese Vorlage ist unter der [MIT-Lizenz](LICENSE) verfügbar.
-
----
-
-## Kontakt und Support
-
-Bei Fragen oder Verbesserungsvorschlägen:
-- **GitHub:** https://github.com/Pixelpilot/HTL-Braunau-DA-LaTeX-Template
-- **Issues:** Bitte erstellen Sie ein Issue im Repository
-
----
-
-**Viel Erfolg beim Schreiben Ihrer Diplomarbeit!**
