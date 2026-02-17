@@ -45,10 +45,10 @@
 \usepackage{multicol} % für mehrspaltige Texte
 
 
-%	########################################################
+% --------------------------------------------------------
 % 	Vermeiden der KOMA Script Fehlermeldung:
 %      'Class scrbook Error: undefined old font command `\rm''	
-%	########################################################
+% --------------------------------------------------------
 
 \makeatletter
 \DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
@@ -62,16 +62,16 @@
 
 
 
-%	########################################################
+% --------------------------------------------------------
 % 	Dokumentabmessungen	
-%	########################################################
+% --------------------------------------------------------
 
 \geometry {a4paper, bottom=30mm, right=25mm}%, left=30mm, right=30mm, top=25mm, bottom=25mm}
 
 
-%	########################################################
+% --------------------------------------------------------
 % 	Kopfzeile
-%	########################################################
+% --------------------------------------------------------
 
 \pagestyle{fancyplain}
 \fancyhf{}
@@ -87,12 +87,12 @@
 % Auskommentieren der folgenden Zeile setzt das HTL Logo in die
 % Mitte der Kopfzeile auf jeder ersten Haupt-Kapitelseite
 
-%\chead{\fancyplain{\includegraphics[width=1.5cm]{./media/images/htl_c_cmyk_rein.pdf}}{}}
+% \chead{\fancyplain{\includegraphics[width=1.5cm]{./media/images/htl_c_cmyk_rein.pdf}}{}}
 
 
-%	########################################################
+% --------------------------------------------------------
 % 	Farbdefinitionen	
-%	########################################################
+% --------------------------------------------------------
 
 \definecolor{darkgrey}{RGB}{80,80,80}
 \definecolor{grey}{RGB}{127,127,127}
@@ -110,9 +110,9 @@
 
 
 
-%	########################################################
+% --------------------------------------------------------
 % 	Diverse Befehle		
-%	########################################################
+% --------------------------------------------------------
 
 %	Quelltext im Textfluss
 \def\inlinecode#1{\texttt{\color{gray}{#1}}}
@@ -121,7 +121,7 @@
 %	Paragraph mit Zeilenumbruch nachher
 \def\htlParagraph#1{\paragraph*{#1}$\;$ \\}
 
-%   Short Version of \today
+%   Kurzversion \today
 \newcommand{\leadingzero}[1]{\ifnum #1<10 0\the#1\else\the#1\fi}
 \newcommand{\todayshort}{\leadingzero{\day}.\leadingzero{\month}.\the\year}
 
@@ -140,9 +140,9 @@
     \par\vspace{0.5\baselineskip}%
 }
 
-%	########################################################
+% --------------------------------------------------------
 % 	Code Formatierung		
-%	########################################################
+% --------------------------------------------------------
 \lstset{literate=%
 {Ö}{{\"O}}1 
 {Ä}{{\"A}}1 
@@ -182,7 +182,7 @@
 	deletekeywords={...}             	 	% if you want to delete keywords from the given language
 }
 
-%	########################################################
+% --------------------------------------------------------
 % 	CSS		
 \lstdefinelanguage{CSS}{
 		alsoletter={\\,/,*,:,-,\#,.},
@@ -191,9 +191,6 @@
         keywordstyle=\color{black},%\bfseries,
         ndkeywords={@import, @media, @page, @font-face, @charset, @namespace, a, html, body, title, pre, h1, h2, h3, h4, h5, h6, ul, ol, li, p, br, blockquote, dl, dt, dd, div, img, strong, em, cite, tt, i, b, table, tr, td, th, frame, form, option, input, button, nav, section, article, aside, footer, hr, sup, sub, del, ins, small, span},
         ndkeywordstyle=\color{black},%,\bfseries,
-%        identifierstyle=\color{black},
-%        sensitive=false,
-%        comment=[l]{//},
         morecomment=[s]{/*}{*/},
         commentstyle=\color{lightgrey}\ttfamily,
         stringstyle=\color{black}\ttfamily,
@@ -232,40 +229,30 @@
 
 
 
-%	########################################################
+% --------------------------------------------------------
 % 	JavaScript	
+
 \lstdefinelanguage{JavaScript}{
         keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
 		alsoletter={\{,\}\\,/,*,:,-,\#,.},
- %       keywordstyle=\color{blue}\bfseries,
         ndkeywords={class, export, boolean, throw, implements, import, this},
-%        ndkeywordstyle=\color{darkgray}\bfseries,
-%        identifierstyle=\color{black},
-%        sensitive=false,
         comment=[l]{//},
         morecomment=[s]{/*}{*/},
-%        commentstyle=\color{purple}\ttfamily,
-%        stringstyle=\color{red}\ttfamily,
         morestring=[b]',
         morestring=[b]"
 }
 
 
 
-%	########################################################
+% --------------------------------------------------------
 % 	TypoScript	
+
 \lstdefinelanguage{TypoScript}{
         keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
 		alsoletter={\{,\}\\,/,*,:,-,\#,.},
- %       keywordstyle=\color{blue}\bfseries,
         ndkeywords={class, export, boolean, throw, implements, import, this},
-%        ndkeywordstyle=\color{darkgray}\bfseries,
-%        identifierstyle=\color{black},
-%        sensitive=false,
         comment=[l]{//},
         morecomment=[s]{/*}{*/},
-%        commentstyle=\color{purple}\ttfamily,
-%        stringstyle=\color{red}\ttfamily,
         morestring=[b]',
         morestring=[b]"
 }

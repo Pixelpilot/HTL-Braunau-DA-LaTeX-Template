@@ -12,6 +12,7 @@
 
 \emph{Dieser Abschnitt fasst die Kernerkenntnisse der Arbeit zusammen. Es werden die definierten Ziele, die durchgeführten Arbeitsschritte und die wichtigsten Ergebnisse kurz und prägnant zusammengefasst, um dem Leser einen schnellen Überblick zu geben.}
 
+% --------------------------------------------------------
 \placeholderbox{Beispiel}{%
 Die Diplomarbeit verfolgte das Ziel, einen intelligenten Dependency Analyzer für JavaScript-Projekte zu entwickeln. Über vier Monate wurden folgende Arbeitsschritte durchgeführt: (1) Analyse von 50 Open-Source-Projekten zur Identifizierung typischer Versionskonflikte, (2) Entwicklung eines AST-basierten Analyzers mit Machine Learning Klassifikator, (3) Implementierung als Web-Anwendung, (4) Evaluierung mit 8 Testnutzern. Die wichtigsten Ergebnisse: Der Analyzer erkennt 94\,\% der Breaking Changes vorab, mit durchschnittlich 2,3 Sekunden Verarbeitungszeit.
 }
@@ -23,8 +24,9 @@ Die Diplomarbeit verfolgte das Ziel, einen intelligenten Dependency Analyzer fü
 
 \emph{Das Fazit präsentiert die kritische Bewertung der erreichten Ergebnisse im Kontext der ursprünglichen Zielsetzung. Es werden Erfolge reflektiert, Kräfte und Grenzen der Lösung analysiert und eine abschließende Stellungnahme zur Beantwortung der Forschungsfrage gegeben.}
 
+% --------------------------------------------------------
 \placeholderbox{Beispiel}{%
-Das entwickelte System erfüllt die Zielsetzung: Durch die automatische Erkennung von Breaking Changes werden Integrationsfehler deutlich reduziert und die Entwicklungszeit verkürzt. Stärken sind die hohe Erkennungsquote (94\,\%) und die geringe Konfigurationszeit. Einschränkungen zeigen sich bei sehr großen Projekten (>50 MB Körpergröße) und bei dynamischen Imports. Das System stellt daher einen praktischen und wertvollen Beitrag dar, benötigt aber noch Optimierungen für Edge Cases.%
+Das entwickelte System erfüllt die Zielsetzung: Durch die automatische Erkennung von Breaking Changes werden Integrationsfehler deutlich reduziert und die Entwicklungszeit verkürzt. Stärken sind die hohe Erkennungsquote (94\,\%) und die geringe Konfigurationszeit. Einschränkungen zeigen sich bei sehr großen Projekten (>50 MB Projektgröße) und bei dynamischen Imports. Das System stellt daher einen praktischen und wertvollen Beitrag dar, benötigt aber noch Optimierungen für Edge Cases.%
     %
     \newline\newline
     \ldots
@@ -36,10 +38,9 @@ Das entwickelte System erfüllt die Zielsetzung: Durch die automatische Erkennun
 \section{Ausblick}
 
 \emph{Der Ausblick beschreibt mögliche Weiterentwicklungen, offene Fragestellungen und zukünftige Forschungsansätze. Es werden Erkenntnisse vorgestellt, die sich für nachfolgende Arbeiten als wertvoll erweisen könnten, sowie Verbesserungspotenziale der aktuellen Lösung.%
-    %
-    \newline\newline
-    \ldots}
+}
 
+% --------------------------------------------------------
 \placeholderbox{Beispiel}{%
 Zukünftige Arbeiten sollten sich auf folgende Bereiche konzentrieren: (1) Performance-Optimierung für sehr große Projekte durch Parallelisierung und Caching, (2) Unterstützung dynamischer Imports und ES6 Modules, (3) Integration mit Package Manager APIs (npm, yarn) für vollständige Dependency Resolution, (4) Erweiterung auf weitere Sprachenkosysteme (Python, Java). Offen bleiben Fragen zur Effizienz bei Monorepos und zur Integration mit bestehenden DevOps-Pipelines. Ein Prototyp als VS Code Extension könnte die Adoption erhöhen.%
     %

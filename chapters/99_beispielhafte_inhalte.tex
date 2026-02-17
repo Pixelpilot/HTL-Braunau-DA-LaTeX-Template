@@ -12,6 +12,7 @@
 \markboth{Beispielhafte Inhalte: Zitieren, Abbildungen, Quelltext}{Mein Kapitel}
 \addcontentsline{toc}{chapter}{Beispielhafte Inhalte: Zitieren, Abbildungen, Quelltext}
 
+% --------------------------------------------------------
 \placeholderbox{Hinweis}{
 \subsection*{Achtung!}
 In diesem Kapitel ist nicht Teil der Diplomarbeit, sondern dient lediglich der Veranschaulichung, wie Abbildungen, Zitate und Quelltext zu verwenden sind.
@@ -34,12 +35,14 @@ Auch beschrieben wird, wie mit KI-generierten Inhalten umzugehen ist. Alle KI-ge
 Abbildung sind mit einer Abbildungsnummer und einer Unterschrift zu versehen die kurz die Abbildung beschreibt. 
 Abbildungen gehören zum umgebenden Text und müssen dort erwähnt werden.
 
+% --------------------------------------------------------
 \placeholderbox{Beispiel}{
 Beispiel: In Abbildung \ref{htl01} wird das Logo der HTL Braunau dargestellt.
 }
 
 Wird auf eine Abbildung referenziert die sich weiter von der aktuellen Textstelle entfernt befindet so kann auch die Seitennummer hinzugefügt werden.
 
+% --------------------------------------------------------
 \placeholderbox{Beispiel}{
 Beispiel: Siehe Abbildung \ref{htl01} auf Seite \pageref{htl01}.
 }
@@ -103,16 +106,19 @@ Klammern) und verweisen Sie immer auf das Literaturverzeichnis.
   \item Verkürzungen in Zitaten werden mit [\ldots] gekennzeichnet.
 \end{itemize}
 
+% --------------------------------------------------------
 \placeholderbox{Beispiel für Quellenangabe}{
 Quellenangaben gehören immer ins Literaturverzeichnis, das automatisch aus den verwendeten Zitationen erstellt wird \cite{bib:wikilitverz}.
 }
 
+% --------------------------------------------------------
 \placeholderbox{Beispiel für Quellenangabe}{
 Das Verwenden fremden Gedankenguts ohne Quellenangabe ist ein Plagiat und kann
 rechtliche Folgen haben \cite{bib:wikiplagiat}.
 }
 \subsection*{Praktische Beispiele}
 
+% --------------------------------------------------------
 \placeholderbox{Längeres Zitat mit Verkürzung und anschließender Einordnung}{
 \textbf{Navigation in Single-Page-Websites}
 
@@ -133,15 +139,18 @@ Kurz-Links) notwendig sind, um den roten Faden der Nutzung zu sichern.
   \item Fußnoten verwenden, wenn eine kurze Nebeninformation, ein Begriffshinweis oder eine ergänzende Erklärung den Lesefluss sonst stören würde.
 \end{itemize}
 
+% --------------------------------------------------------
 \placeholderbox{Kurze Nebeninformationen als Fußnote}{
 Die Implementierung erfolgte in Python 3.11\footnote{Verwendet wurde die offizielle Distribution von python.org, Version 3.11.4}, da diese Version zum Zeitpunkt der Entwicklung die aktuellste stabile Version war.
 }
 
+% --------------------------------------------------------
 \placeholderbox{Begriffserklärung als Fußnote}{
 In diesem Abschnitt wird der Begriff \emph{NPR} verwendet.\footnote{NPR steht für \emph{Non-photorealistic
 Rendering} und beschreibt Techniken, die bewusst nicht fotorealistisch wirken.}
 }
 
+% --------------------------------------------------------
 \placeholderbox{Methodischer Hinweis als Fußnote}{
 Die Messwerte wurden in einer Testumgebung erhoben.\footnote{Tests auf isoliertem System ohne Produktivlast; Ergebnisse nur bedingt auf Live-Betrieb übertragbar.}
 }
@@ -164,6 +173,15 @@ Die Fußnote sollte folgende Informationen enthalten:
   \item Bearbeitung durch den Autor (falls zutreffend)
 \end{itemize}
 
+% --------------------------------------------------------
+\placeholderbox{Beispiel für Absatz mit KI-Unterstützung}{
+KI-Systeme revolutionieren die Art und Weise, wie wir Informationen verarbeiten und Entscheidungen treffen. Durch ihre Fähigkeit zur Mustererkennung und Datenanalyse ermöglichen sie schnellere und präzisere Lösungen in verschiedensten Anwendungsbereichen.\footnote{Dieser Absatz basiert auf einer Anfrage an Claude Haiku 4.5 vom 12.02.2026 mit dem Prompt: \glqq Schreibe einen einleitenden Absatz über die Auswirkungen von KI auf Informationsverarbeitung und Entscheidungsfindung.\grqq ~Das Ergebnis wurde für akademische Zwecke angepasst und auf Korrektheit überprüft.}
+}
+
+
+Diese Integration von KI in wissenschaftliche Arbeiten erfordert aber kritisches Denken und Verantwortung. Der Autor bleibt für alle verwendeten Inhalte verantwortlich, auch wenn diese mit KI-Unterstützung erstellt wurden.
+
+% --------------------------------------------------------
 \placeholderbox{Beispiel für Absatz mit KI-Unterstützung}{
 KI-Systeme revolutionieren die Art und Weise, wie wir Informationen verarbeiten und Entscheidungen treffen. Durch ihre Fähigkeit zur Mustererkennung und Datenanalyse ermöglichen sie schnellere und präzisere Lösungen in verschiedensten Anwendungsbereichen.\footnote{Dieser Absatz basiert auf einer Anfrage an Claude Haiku 4.5 vom 12.02.2026 mit dem Prompt: \glqq Schreibe einen einleitenden Absatz über die Auswirkungen von KI auf Informationsverarbeitung und Entscheidungsfindung.\grqq ~Das Ergebnis wurde für akademische Zwecke angepasst und auf Korrektheit überprüft.}
 }
@@ -176,9 +194,6 @@ Diese Integration von KI in wissenschaftliche Arbeiten erfordert aber kritisches
 %	Listings, Code
 %	--------------------------------------------------------
 
-% --------------------------------------------------------
-% TODO: Beschreibung für diesen Abschnitt hinzufügen
-% --------------------------------------------------------
 \section*{Listings, Code}
 
 Quelltext ist ein wesentlicher Bestandteil einer Informatik Diplomarbeit.
@@ -191,6 +206,7 @@ Listing \ref{code:helloworld} auf Seite \pageref{code:helloworld} zeigt ein Hall
 
 %	--------------------------------------------------------
 %	C++
+
 \begin{minipage}{\linewidth}
 \lstinputlisting[language=C++,caption={Mein erstes C-Programm.},label=code:helloworld]{./media/code_snippets/bsp_01.cpp}
 \end{minipage}
@@ -225,16 +241,19 @@ function getMousePos(canvas, evt) {
 
 %	--------------------------------------------------------
 %	CSS
+
 \lstinputlisting[language=CSS,caption={Kurzer CSS--Quelltext.}]{./media/code_snippets/bsp.css}
 
 
 %	--------------------------------------------------------
 %	HTML
+
 \lstinputlisting[language=HTML,caption={HTML--Quelltext}]{./media/code_snippets/bsp.html}
 
 
 %	--------------------------------------------------------
 %	HTML
+
 \lstinputlisting[language=JavaScript,caption={JavaScript--Quelltext}]{./media/code_snippets/bsp.js}
 
 
